@@ -7,12 +7,15 @@
 <router-link to="/login" tag="button">Login</router-link> <router-link to="/register" tag="button">Register</router-link>
     <main>
       <div>
-         <form class="login" @submit.prevent="login">
+         <form class="register" @submit.prevent="register">
            <h1> Register</h1>
+           <label>Name</label>
+           <input required v-model="name" type="text" placeholder="Name"/>
            <label>Email</label>
-           <input required v-model="email" type="text" placeholder="Snoopy"/>
+           <input required v-model="email" type="email" placeholder="Email"/>
            <label>Password</label>
            <input required v-model="password" type="password" placeholder="Password"/>
+           <input required v-model="password_c" type="password_c" placeholder="Password confirmation"/>
            <hr/>
            <button type="submit">Login</button>
          </form>
@@ -28,12 +31,14 @@
 import axios from 'axios'
 
 export default {
-  name: 'Login',
+  name: 'Register',
   data () {
     return {
       loading: false,
       password: '',
+      password_c: '',
       email: '',
+      name: '',
       user_name: localStorage.getItem('user_name'),
     }
   },
@@ -41,19 +46,19 @@ export default {
 
 
 
-login(){
-
-
-      axios.post('http://peaceful-dusk-59248.herokuapp.com/api/login',
+register(){
+      axios.post('http://peaceful-dusk-59248.herokuapp.com/api/register',
         {email: this.email,
-         password: this.password})
+         name: this.name,
+       password: this.password,
+     password_confirmation: this.password_c})
 
       .then(response => {
 
         localStorage.setItem('api_token',response.data.data.api_token);
         localStorage.setItem('user_id',response.data.data.id);
         localStorage.setItem('user_name',response.data.data.name);
-
+ self.$router.push('/admin');
 
       })
       .catch(error => {

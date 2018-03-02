@@ -37,6 +37,7 @@ router.beforeEach((to, from, next) => {
   if (to.matched.some(record => record.meta.adminOnly)) {
 var token = localStorage.getItem('api_token');
 
+
     if (!token) {
       next({
         path: '/login',

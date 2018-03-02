@@ -42,7 +42,7 @@
 import axios from 'axios'
 
 export default {
-  name: 'App',
+  name: 'Admin',
   data () {
     return {
       articles: [],
@@ -50,7 +50,7 @@ export default {
       password: '',
       email: '',
       user_name: localStorage.getItem('user_name'),
-    }
+    } 
   },
   methods: {
     getArticles: function () {
@@ -59,7 +59,7 @@ export default {
       axios.get("https://peaceful-dusk-59248.herokuapp.com/api/articles")
 
       .then((response)  =>  {
-      console.log(response)
+
         this.loading = false;
         this.articles = response.data;
       }, (error)  =>  {
@@ -81,7 +81,7 @@ export default {
     })
 
       .then((response)  =>  {
-      console.log(response)
+
         this.loading = false;
         this.articles = response.data;
       }, (error)  =>  {

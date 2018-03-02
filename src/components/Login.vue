@@ -53,11 +53,11 @@ login(){
         localStorage.setItem('api_token',response.data.data.api_token);
         localStorage.setItem('user_id',response.data.data.id);
         localStorage.setItem('user_name',response.data.data.name);
-
+        console.log(localStorage.getItem('api_token'));
 
       })
       .catch(error => {
-        
+
         localStorage.removeItem('api_token')
 
       });
