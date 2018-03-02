@@ -7,6 +7,9 @@ import Login from './components/Login'
 import Home from './components/Home'
 import Register from './components/Register'
 import Admin from './components/Admin'
+import InstantSearch from 'vue-instantsearch';
+
+Vue.use(InstantSearch);
 //tell vue to use the router
 Vue.use(VueRouter)
 //define your routes
@@ -56,6 +59,7 @@ var token = localStorage.getItem('api_token');
 new Vue({
 //define the selector for the root component
   el: '#app',
+  render: h => h(App),
   //pass the template to the root component
   template: '<App/>',
   //declare components that the root component can access

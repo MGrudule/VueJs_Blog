@@ -1,5 +1,22 @@
 <template>
+
   <div id="app">
+    <ais-index
+   app-id="Y7YIBDZQC9"
+   api-key="347f9eba674acdd2fa8548acdefed052"
+   index-name="articles_index"
+
+ >
+   <ais-search-box></ais-search-box><ais-powered-by></ais-powered-by>
+   <ais-results >
+     <template slot-scope="{ result }">
+       <h2>
+
+         <ais-highlight :result="result" attribute-name="title"></ais-highlight>
+       </h2>
+     </template>
+   </ais-results>
+ </ais-index>
     <router-link v-bind:to="'/'">Home</router-link>
     <router-link v-bind:to="'/admin'">Admin</router-link>
   <!-- the router outlet, where all matched components would ber viewed -->
@@ -7,10 +24,12 @@
   </div>
 </template>
 
+
 <script>
 export default {
   name: 'app',
 }
+
 </script>
 <!-- styling for the component -->
 <style>
