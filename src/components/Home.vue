@@ -1,23 +1,66 @@
 <template>
-  <div id="app">
+  <div>
+      <Slideout side="right" menu="#search"  panel="#main" :toggleSelectors="['.toggle-button-search','.toggle-button-close']"  >
+          <nav id="search" >
+                <div>
 
-<router-link to="/login" tag="button">Login</router-link> <router-link to="/register" tag="button">Register</router-link>
+                   <ais-index
+                app-id="Y7YIBDZQC9"
+                api-key="347f9eba674acdd2fa8548acdefed052"
+                index-name="articles_index"
+
+                >
+
+                        <header>
+                            <div>
+                                <button class="toggle-button-close">close</button>
+
+                            </div>
+                          </header>
+
+                      <ais-search-box></ais-search-box>
+
+                      <ais-results >
+                           <template slot-scope="{ result }">
+                             <span>
+
+                               <ais-highlight :result="result" attribute-name="title"></ais-highlight>
+                             </span>
+                             <hr>
+                           </template>
+                      </ais-results>
+                      <ais-powered-by></ais-powered-by>
+                </ais-index>
+
+              </div>
+          </nav>
+
+    </Slideout>
+  <div id="main">
+    <header>
+
+
+
+
+
+
+      <router-link to="/login" tag="button">Login</router-link> <router-link to="/register" tag="button">Register</router-link> <button class="toggle-button-search">🔍</button>  </header>
 <main>
 
 
 
 
-  <div class="wrapper">
-    
+  <div  class="wrapper">
+
   <div class="row">
       <div v-for="article in articles" :key="article.id">
       <div class="col-md-4 cards">
 
 
         <div>
-          <h3>{{ article.title }}</h3>
+          <h3>{{ article.title }} id {{article.id}}</h3>
           <div v-html="article.content"></div>
-          <p>{{ article.created_at }} {{article.id}}</p>
+          <p>{{ article.created_at }} </p>
 
         </div>
       </div>
@@ -26,15 +69,20 @@
   </div>
 </main>
   </div>
+</div>
 </template>
 
 <script>
 
+import Slideout from 'vue-slideout'
 
 import axios from 'axios'
 
 export default {
   name: 'Home',
+  components: {
+    Slideout
+},
 
   data () {
     return {
@@ -59,12 +107,5 @@ export default {
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
