@@ -7,6 +7,9 @@ import Login from './components/Login'
 import Home from './components/Home'
 import Register from './components/Register'
 import Admin from './components/Admin'
+import Edit from './components/Edit'
+import New from './components/New'
+import Articles from './components/Articles'
 import InstantSearch from 'vue-instantsearch';
 
 Vue.use(InstantSearch);
@@ -20,10 +23,44 @@ Vue.use(VueRouter)
 //define your routes
 const routes = [
 //define the root url of the application.
-{ path: '/', component: Home , meta: { adminOnly: false } },
-{ path: '/admin', component: Admin, meta: { adminOnly: true } },
-{ path: '/login', component: Login, meta: { adminOnly: false } },
-{ path: '/register', component: Register, meta: { adminOnly: false } }
+{
+  path: '/',
+  component: Home ,
+  meta: { adminOnly: false }
+},
+{ path: '/admin',
+  component: Admin,
+  meta: { adminOnly: true },
+
+  children: [
+        {
+          path: 'new',
+          name: 'New',
+          component: New
+        },
+        {
+          path: '',
+          name: 'Articles',
+          component: Articles
+        },
+        {
+          path: 'edit/:id',
+          name: 'Edit',
+          component: Edit
+        }
+      ]
+
+},
+{
+   path: '/login',
+   component: Login,
+   meta: { adminOnly: false }
+ },
+
+{ path: '/register',
+  component: Register,
+  meta: { adminOnly: false }
+}
 ]
 
 
