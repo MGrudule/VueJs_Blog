@@ -15,7 +15,7 @@
            <input required v-model="email" type="email" placeholder="Email"/>
            <label>Password</label>
            <input required v-model="password" type="password" placeholder="Password"/>
-           <input required v-model="password_c" type="password_c" placeholder="Password confirmation"/>
+           <input required v-model="password_c" type="password" placeholder="Password "/>
            <hr/>
            <button type="submit">Login</button>
          </form>

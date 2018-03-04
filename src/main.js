@@ -73,22 +73,18 @@ const router = new VueRouter({
 })
 
 
+
+
 router.beforeEach((to, from, next) => {
-  if (to.matched.some(record => record.meta.adminOnly)) {
-var token = localStorage.getItem('api_token');
-
-
-    if (!token) {
-      next({
-        path: '/login',
-        query: { redirect: to.fullPath }
-      })
-    } else {
-      next()
-    }
-  } else {
-    next() // make sure to always call next()!
-  }
+const token = localStorage.getItem('api_token');
+const adminOnly = to.matched.some(record => record.meta.adminOnly);
+if (adminOnly && !token) {
+ next('/login');
+} else if (adminOnly && token) {
+ next();
+} else {
+ next();
+}
 });
 
 
