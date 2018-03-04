@@ -1,14 +1,11 @@
 <template>
-  <div class="admin-new">
-  <router-link to="/admin">Back to Articles</router-link>
- <form class="edit" @submit.prevent="postArticle(article)">
+  <div class="comments-new">
+    Add comment
 
-   <p>
-     <input required v-model="article.title" type="text" placeholder="Article title">
+ <form class="edit" @submit.prevent="postComment(comment)">
 
-   </p>
-   <p>
-     <textarea required v-model="article.content" type="text" placeholder="Article content"> </textarea>
+
+     <textarea required v-model="content" type="text" placeholder="Article content"> </textarea>
 
    </p>
 
@@ -24,21 +21,20 @@ export default {
   name: 'New',
   data () {
     return {
-      article: [],
+      comments: [],
       loading: false,
-      title: '',
       content: '',
       user_id: localStorage.getItem('user_id'),
     }
   },
   methods: {
 
-    postArticle: function (article) {
+    postComment: function (comment) {
 
 
-      axios.post("https://peaceful-dusk-59248.herokuapp.com/api/auth/articles",
-    {title: article.title,
-     content: article.content,
+      axios.post("https://peaceful-dusk-59248.herokuapp.com/api/articles/" + this.$route.params.id + "/comment",
+    { article_id: this.$route.params.id,
+     content: comment.content,
      user_id: this.user_id},{
     headers: { Authorization: "Bearer " + localStorage.getItem('api_token') }
     })
@@ -46,7 +42,7 @@ export default {
       .then((response)  =>  {
 
         this.loading = false;
-        this.articles = response.data;
+
       }, (error)  =>  {
         this.loading = false;
       })

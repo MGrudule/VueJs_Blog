@@ -10,6 +10,8 @@ import Admin from './components/Admin'
 import Edit from './components/Edit'
 import New from './components/New'
 import Articles from './components/Articles'
+import Article from './components/Article'
+import HomeArticles from './components/HomeArticles'
 import InstantSearch from 'vue-instantsearch';
 
 Vue.use(InstantSearch);
@@ -26,7 +28,20 @@ const routes = [
 {
   path: '/',
   component: Home ,
-  meta: { adminOnly: false }
+  meta: { adminOnly: false },
+  children: [
+
+        {
+          path: 'articles/:id',
+          name: 'Article',
+          component: Article
+        },
+        {
+          path: '',
+          name: 'HomeArticles',
+          component: HomeArticles
+        }
+      ]
 },
 { path: '/admin',
   component: Admin,

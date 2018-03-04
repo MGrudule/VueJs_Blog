@@ -2,8 +2,8 @@
 
   <div id="app">
     <div>
-      <router-link v-bind:to="'/'">Home</router-link>
-      <router-link v-bind:to="'/admin'">Admin</router-link>
+      <router-link tag="button" v-bind:to="'/'">Home</router-link>
+      <router-link tag="button" v-bind:to="'/admin'">Admin</router-link>
     </div>
 
 

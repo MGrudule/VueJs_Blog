@@ -17,7 +17,7 @@
                 <div v-html="article.content"></div>
                 <p>{{ article.created_at }} {{article.id}}</p>
                 <button  class="" v-on:click="deleteArticle(article.id)"> Delete Article</button>
-                  <router-link v-bind:to="'/admin/edit/'+ article.id">Edit</router-link>
+                  <router-link tag="button" v-bind:to="'/admin/edit/'+ article.id">Edit</router-link>
 
               </div>
             </div>

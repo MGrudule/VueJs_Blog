@@ -50,23 +50,8 @@
 
 
 
-  <div  class="wrapper">
 
-  <div class="row">
-      <div v-for="article in articles" :key="article.id">
-      <div class="col-md-4 cards">
-
-
-        <div>
-          <h3>{{ article.title }} id {{article.id}}</h3>
-          <div v-html="article.content"></div>
-          <p>{{ article.created_at }} </p>
-
-        </div>
-      </div>
-    </div>
-    </div>
-  </div>
+   <router-view></router-view>
 </main>
   </div>
 </div>
