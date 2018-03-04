@@ -1,30 +1,32 @@
-# blog
+# Blog made with Vue.js 
 
-> A Vue.js project
+This is responsive blog that uses Vue.js and API back-end made in Laravel .
+The scrum board can be found on  [ Trello](https://trello.com/b/PNoFE0Nk/week-7-api-vuejs) 
 
-## Build Setup
+## Functions
 
-``` bash
-# install dependencies
-npm install
+### User
+* Read articles ( [ Example API call](https://peaceful-dusk-59248.herokuapp.com/api/articles) )
+* Login/Register
+* Comment when loged-in
+* Search articles
 
-# serve with hot reload at localhost:8080
-npm run dev
+### Admin
+* Post articles
+* Edit/Update articles
+* Delete articles
 
-# build for production with minification
-npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
+## Feature description
 
-# run unit tests
-npm run unit
+### API (Laravel)
+At this moment 11 api calls are utilized. 
 
-# run e2e tests
-npm run e2e
+### Login function
 
-# run all tests
-npm test
-```
+The login authentication is done via api-token. After user is loge-in the token is stored in local storage. 
+All routes that require post/delete/update are login-protected 
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+### Search function
+A  instant search functionality  with [ Algolia drivers](https://www.algolia.com/) 
+
