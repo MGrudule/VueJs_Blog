@@ -9,6 +9,8 @@ import Register from './components/Register'
 import Admin from './components/Admin'
 import Edit from './components/Edit'
 import New from './components/New'
+import Categories from './components/Categories'
+import isLoggedMixin from './mixins/isLoggedMixin'
 import Articles from './components/Articles'
 import Article from './components/Article'
 import HomeArticles from './components/HomeArticles'
@@ -63,6 +65,12 @@ const routes = [
           name: 'Edit',
           component: Edit
         }
+        ,
+        {
+          path: 'categories',
+          name: 'Categories',
+          component: Categories
+        }
       ]
 
 },
@@ -112,6 +120,7 @@ new Vue({
   template: '<App/>',
   //declare components that the root component can access
   components: { App },
+  
   //pass in the router to the Vue instance
   router
 }).$mount('#app')//mount the router on the app

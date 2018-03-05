@@ -10,6 +10,8 @@
                 <router-link to="/admin">Manage Articles</router-link>
 <hr>
             <router-link to="/admin/new">New Article</router-link>
+            <hr>
+            <router-link to="/admin/categories">Categories</router-link>
 
               </div>
             </nav>

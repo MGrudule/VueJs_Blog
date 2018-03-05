@@ -38,6 +38,7 @@ export default {
    .then((response)  =>  {
 
      this.article = response.data;
+
    }, (error)  =>  {
      this.loading = false;
    })
@@ -45,7 +46,7 @@ export default {
 
   methods: {
     updateArticle: function (article) {
-    
+
     var params = new URLSearchParams();
     params.append('title', article.title);
     params.append('content', article.content);
@@ -58,7 +59,7 @@ export default {
         })
 
       .then((response)  =>  {
-      console.log(response)
+       this.$router.push(this.$route.query.redirect || '/admin');
 
       }, (error)  =>  {
         this.loading = false;

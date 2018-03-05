@@ -46,6 +46,7 @@ export default {
    .then((response)  =>  {
 
      this.articles = response.data;
+
    }, (error)  =>  {
      this.loading = false;
    })
@@ -59,7 +60,7 @@ export default {
 
 
     deleteArticle: function (value) {
-      console.log(value);
+
 
 
       this.loading = true;
@@ -69,7 +70,11 @@ export default {
     })
 
       .then((response)  =>  {
-      console.log(response)
+      console.log(response),
+
+       this.articles.splice(this.articles.indexOf(value), 1);
+      //remove(article + "." + value);
+
 
       }, (error)  =>  {
         this.loading = false;

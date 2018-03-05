@@ -54,6 +54,7 @@ login(){
         localStorage.setItem('user_id',response.data.data.id);
         localStorage.setItem('user_name',response.data.data.name);
         console.log(localStorage.getItem('api_token'));
+        this.$router.push(this.$route.query.redirect || '/admin');
 
       })
       .catch(error => {

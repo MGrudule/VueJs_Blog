@@ -47,6 +47,7 @@ export default {
 
         this.loading = false;
         this.articles = response.data;
+        this.$router.push(this.$route.query.redirect || '/admin');
       }, (error)  =>  {
         this.loading = false;
       })

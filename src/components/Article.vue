@@ -38,7 +38,7 @@
 
                   <div>
 
-                user  {{posted_comment.user_id}}  <div v-html="posted_comment.content"></div>
+                <strong>  {{posted_comment.user.name}} </strong>  <div v-html="posted_comment.content"></div>
 
 
                   </div>
@@ -62,10 +62,16 @@ export default {
     return {
       article: [],
       posted_comments: [],
+      response: [],
       comment: [],
       loading: false,
       content: '',
       user_id: localStorage.getItem('user_id'),
+      user_name: localStorage.getItem('user_name'),
+      user: {
+        id: localStorage.getItem('user_id'),
+        name: localStorage.getItem('user_name')
+      }
 
     }
   },
@@ -92,7 +98,11 @@ export default {
     })
 
       .then((response)  =>  {
-this.posted_comments.push(data)
+
+        response.data["user"] = this.user,
+
+this.article.posted_comments.push(response.data),
+
         this.loading = false;
 
       }, (error)  =>  {

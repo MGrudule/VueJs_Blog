@@ -58,7 +58,7 @@ register(){
         localStorage.setItem('api_token',response.data.data.api_token);
         localStorage.setItem('user_id',response.data.data.id);
         localStorage.setItem('user_name',response.data.data.name);
- self.$router.push('/admin');
+ this.$router.push(this.$route.query.redirect || '/admin');
 
       })
       .catch(error => {
