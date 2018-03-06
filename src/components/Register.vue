@@ -1,14 +1,12 @@
 <template>
   <div id="main">
-  <header>
-      <span>One page blog</span>
-      <span> Hello {{ user_name}} </span>
-    </header>
-<router-link to="/login" tag="button">Login</router-link> <router-link to="/register" tag="button">Register</router-link>
+
     <main>
       <div>
+        Register or <router-link to="/login" tag="button">Log-in</router-link>
+         <hr>
          <form class="register" @submit.prevent="register">
-           <h1> Register</h1>
+           
            <label>Name</label>
            <input required v-model="name" type="text" placeholder="Name"/>
            <label>Email</label>

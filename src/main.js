@@ -42,6 +42,17 @@ const routes = [
           path: '',
           name: 'HomeArticles',
           component: HomeArticles
+        },
+        {
+           path: '/login',
+           component: Login,
+
+           meta: { adminOnly: false }
+         },
+
+        { path: '/register',
+          component: Register,
+          meta: { adminOnly: false }
         }
       ]
 },
@@ -74,16 +85,7 @@ const routes = [
       ]
 
 },
-{
-   path: '/login',
-   component: Login,
-   meta: { adminOnly: false }
- },
 
-{ path: '/register',
-  component: Register,
-  meta: { adminOnly: false }
-}
 ]
 
 
@@ -120,7 +122,7 @@ new Vue({
   template: '<App/>',
   //declare components that the root component can access
   components: { App },
-  
+
   //pass in the router to the Vue instance
   router
 }).$mount('#app')//mount the router on the app

@@ -44,14 +44,9 @@
 
 
 
-      <router-link to="/login" tag="button">Login</router-link> <router-link to="/register" tag="button">Register</router-link> <button class="toggle-button-search">🔍</button>  </header>
+    <button class="toggle-button-search">🔍</button>  </header>
 <main>
-
-
-
-
-
-   <router-view></router-view>
+   <router-view ></router-view>
 </main>
   </div>
 </div>
@@ -86,7 +81,8 @@ export default {
    }, (error)  =>  {
      this.loading = false;
    })
-  }
+ }
+
 
 }
 </script>

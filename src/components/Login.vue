@@ -1,14 +1,13 @@
 <template>
   <div id="main">
-  <header>
-      <span>One page blog</span>
-      <span> Hello {{ user_name}} </span>
-    </header>
-<router-link to="/login" tag="button">Login</router-link> <router-link to="/register" tag="button">Register</router-link>
+
+
     <main>
-      <div>
+
+      <div> Sign in or <router-link to="/register" tag="button">Register</router-link>
+        <hr>
          <form class="login" @submit.prevent="login">
-           <h1>Sign in</h1>
+
            <label>Email</label>
            <input required v-model="email" type="text" placeholder="Snoopy"/>
            <label>Password</label>
@@ -16,6 +15,7 @@
 
            <button type="submit">Login</button>
          </form>
+
        </div>
 
     </main>
@@ -31,6 +31,7 @@ export default {
   name: 'Login',
   data () {
     return {
+
       loading: false,
       password: '',
       email: '',
@@ -53,7 +54,8 @@ login(){
         localStorage.setItem('api_token',response.data.data.api_token);
         localStorage.setItem('user_id',response.data.data.id);
         localStorage.setItem('user_name',response.data.data.name);
-        console.log(localStorage.getItem('api_token'));
+
+
         this.$router.push(this.$route.query.redirect || '/admin');
 
       })

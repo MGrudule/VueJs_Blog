@@ -2,8 +2,9 @@
 
   <div id="app">
     <div>
-      <router-link tag="button" v-bind:to="'/'">Home</router-link>
-      <router-link tag="button" v-bind:to="'/admin'">Admin</router-link>
+      <router-link  tag="button" v-bind:to="'/'">Home</router-link>
+      <router-link v-if="isLoggedIn" tag="button" v-bind:to="'/admin'">Admin</router-link>
+      <router-link v-else tag="button" v-bind:to="'/login'">Login</router-link>
     </div>
 
 
@@ -13,10 +14,27 @@
 
 
 <script>
-
+import isLoggedMixin from './mixins/isLoggedMixin'
 export default {
   name: 'app',
+mixins:[isLoggedMixin],
 
+data () {
+  return {
+    isLoggedIn: false,
+
+    user_name: localStorage.getItem('user_name'),
+  }
+},
+created(){
+     this.checkIfLogged()
+         .then(response => {
+this.isLoggedIn = true;
+                 this.user = response ? response : false;
+             })
+         .catch(error => console.log(error));
+
+ },
 
 
 }
