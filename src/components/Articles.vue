@@ -8,20 +8,22 @@
 
   <div class="wrapper">
       <div class="row">
-          <div v-for="article in articles" :key="article.id">
-            <div class="col-md-4 cards">
+        <transition-group name="list" tag="p">
+          <div v-for="(article, index) in articles" :key="article.id">
+            <div class="col-md-4 list-item">
 
 
               <div>
                 <h3>{{ article.title }}</h3>
                 <div v-html="article.content"></div>
                 <p>{{ article.created_at }} {{article.id}}</p>
-                <button  class="" v-on:click="deleteArticle(article.id)"> Delete Article</button>
+                <button  class="" v-on:click="deleteArticle(article.id, index)"> Delete Article</button>
                   <router-link tag="button" v-bind:to="'/admin/edit/'+ article.id">Edit</router-link>
 
               </div>
             </div>
         </div>
+         </transition-group>
         </div>
       </div>
   </div>
@@ -59,7 +61,7 @@ export default {
 
 
 
-    deleteArticle: function (value) {
+    deleteArticle: function (value, index) {
 
 
 
@@ -70,11 +72,8 @@ export default {
     })
 
       .then((response)  =>  {
-      console.log(response),
-
-       this.articles.splice(this.articles.indexOf(value), 1);
-      //remove(article + "." + value);
-
+      this.loading = false;
+this.$delete(this.articles, index)
 
       }, (error)  =>  {
         this.loading = false;
@@ -89,5 +88,16 @@ export default {
 
 
 <style >
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active, .list-leave-active {
+  transition: all 1s;
+}
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
 
 </style>

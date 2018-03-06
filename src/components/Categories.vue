@@ -1,43 +1,53 @@
 <template>
   <div class="admin-categories">
-  <router-link to="/admin">Back to Articles</router-link>
- <form class="edit" @submit.prevent="postCategory(category)">
+    <router-link to="/admin">Back to Articles</router-link>
 
-   <p>
-     <input required v-model="category.name" type="text" placeholder="Category name">
+    <form class="edit" @submit.prevent="postCategory(category)">
 
-   </p>
-   <p>
-     <textarea required v-model="category.description" type="text" placeholder="Category description"> </textarea>
+      <p>
+        <input required v-model="category.name" type="text" placeholder="Category name">
 
-   </p>
+      </p>
+      <p>
+        <textarea required v-model="category.description" type="text" placeholder="Category description"> </textarea>
 
-   <button type="submit">Submit</button>
- </form>
- <div class="row">
-     <div v-for="category in categories" :key="category.id">
-       <div class="col-md-4 cards">
+      </p>
 
+      <button type="submit">Submit</button>
+    </form>
+<hr>
 
-         <div>
-           <h3>{{ category.name }}</h3>
-           <div v-html="category.description"></div>
+    <div class="row">
 
-           <button  class="" v-on:click="deleteCategory(category.id)"> Delete Category</button>
-             <router-link tag="button" v-bind:to="'/admin/categories/edit/'+ category.id">Edit</router-link>
+      <transition-group name="list" tag="p">
 
-         </div>
-       </div>
-   </div>
-   </div>
+        <div v-for="(category, index) in categories" :key="category.id" class="list-item">
+          <div class="col-md-4 cards ">
+            <div>
+              <h3>{{ category.name }} {{ category.id }}</h3>
+              <div v-html="category.description"></div>
+
+              <button  class="" v-on:click="deleteCategory(category.id, index)"> Delete Category </button>
+              <router-link tag="button" v-bind:to="'/admin/categories/edit/'+ category.id">Edit</router-link>
+
+            </div>
+          </div>
+        </div>
+
+      </transition-group>
+
+    </div>
   </div>
 </template>
 
 <script>
 
 import axios from 'axios'
+
 export default {
+
   name: 'Categories',
+
   data () {
     return {
       category: [],
@@ -48,35 +58,36 @@ export default {
       user_id: localStorage.getItem('user_id'),
     }
   },
+
   mounted(){
 
-   axios.get("https://peaceful-dusk-59248.herokuapp.com/api/categories")
+        axios.get("https://peaceful-dusk-59248.herokuapp.com/api/categories")
 
-   .then((response)  =>  {
+          .then((response)  =>  {
 
-     this.categories = response.data;
+              this.categories = response.data;
 
-   }, (error)  =>  {
-     this.loading = false;
-   })
- },
+            }, (error)  =>  {
+
+              this.loading = false;
+        })
+      },
+
+
   methods: {
-    deleteCategory: function (value) {
 
-
-
+    deleteCategory: function (value, index) {
       this.loading = true;
       axios.delete("http://peaceful-dusk-59248.herokuapp.com/api/categories/" + value,
-    {
-    headers: { Authorization: "Bearer " + localStorage.getItem('api_token') }
-    })
+      {
+        headers: { Authorization: "Bearer " + localStorage.getItem('api_token') }
+      })
 
       .then((response)  =>  {
-      console.log(response),
+        this.loading = false;
 
-       this.categories.splice(this.categories.indexOf(value), 1);
-      //remove(article + "." + value);
-
+        this.$delete(this.categories, index)
+      
 
       }, (error)  =>  {
         this.loading = false;
@@ -84,29 +95,38 @@ export default {
     },
 
     postCategory: function (category) {
-console.log({name: category.name,
- description: category.description}),
+this.loading = true;
+        axios.post("https://peaceful-dusk-59248.herokuapp.com/api/categories",
+            { name: category.name,
+              description: category.description},
+            {
+                headers: { Authorization: "Bearer " + localStorage.getItem('api_token') }
+          })
 
-      axios.post("https://peaceful-dusk-59248.herokuapp.com/api/categories",
-    {name: category.name,
-     description: category.description},{
-    headers: { Authorization: "Bearer " + localStorage.getItem('api_token') }
-    })
+          .then((response)  =>  {
 
-      .then((response)  =>  {
+            this.loading = false;
 
-        this.loading = false;
-
-        this.categories.push(response.data)
-      }, (error)  =>  {
-        this.loading = false;
-      })
-    },
-  }
-}
+            this.categories.push(response.data)
+          }, (error)  =>  {
+            this.loading = false;
+          })
+        },
+      }
+    }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style >
-
+.list-item {
+  display: inline-block;
+  margin-right: 10px;
+}
+.list-enter-active, .list-leave-active {
+  transition: all 0.2s;
+}
+.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
+  opacity: 0;
+  transform: translateY(30px);
+}
 </style>
