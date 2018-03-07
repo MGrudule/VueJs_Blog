@@ -14,7 +14,9 @@
 
       <button type="submit">Update</button>
     </form>
-    <button @click="toggle()">{{buttonText}}</button> <button  class="" v-on:click="deleteCategory(index)"> Delete Category </button>
+    <div class="button-group">
+
+    <button class="button" @click="toggle()">{{buttonText}}</button> <button  class="button" v-on:click="deleteCategory(index)"> Delete Category </button> </div>
 </div>
 </template>
 

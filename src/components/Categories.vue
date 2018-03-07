@@ -23,27 +23,20 @@
 
     <hr>
 
-    <div  class="">
 
       <transition-group name="list" tag="p">
 
-        <div v-for="(category, index) in categories" :key="category.id" class="list-item" >
-          <div class="col-l-6 ">
-            <div>
+        <div v-for="(category, index) in categories" :key="category.id" class="list-item col-l-6" >
+
               <h3>{{ category.name }} </h3>
-              <div v-html="category.description"></div>
+              <p v-html="category.description"></p>
 
-            </div>
             <EditCategory :data="categories, category"  v-bind:index="index" v-on:deleted="deleteCategory(index)"></EditCategory>
-          </div>
-
-
-
         </div>
 
       </transition-group>
 
-    </div>
+
   </div>
 </template>
 
