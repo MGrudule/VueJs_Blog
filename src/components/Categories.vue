@@ -26,7 +26,7 @@
       <transition-group name="list" tag="p">
 
         <div v-for="(category, index) in categories" :key="category.id" class="list-item">
-          <div class="col-md-6 ">
+          <div class="col-l-6 ">
             <div>
               <h3>{{ category.name }} {{ category.id }}</h3>
               <div v-html="category.description"></div>
@@ -36,6 +36,19 @@
 
             </div>
           </div>
+          <form class="edit" @submit.prevent="updateCategory(category, index)">
+
+            <p>
+              <input type="text" v-model="category.name">
+
+            </p>
+            <p>
+              <textarea id="categoryDescription" type="text" v-model="category.description" rows="20"> </textarea>
+
+            </p>
+
+            <button type="submit">Update</button>
+          </form>
         </div>
 
       </transition-group>
@@ -116,6 +129,26 @@ this.loading = true;
             this.loading = false;
           })
         },
+        updateCategory: function (category, index) {
+
+        var params = new URLSearchParams();
+        params.append('name', category.name);
+        params.append('description', category.description);
+
+          this.loading = true;
+          axios.put("http://peaceful-dusk-59248.herokuapp.com/api/categories/" + this.$route.params.id,
+                params,
+            {
+            headers: { Authorization: "Bearer " + localStorage.getItem('api_token') }
+            })
+
+          .then((response)  =>  {
+           this.$update(this.categories, index);
+
+          }, (error)  =>  {
+            this.loading = false;
+          })
+        }
       }
     }
 </script>
