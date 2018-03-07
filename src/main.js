@@ -13,6 +13,7 @@ import Categories from './components/Categories'
 import isLoggedMixin from './mixins/isLoggedMixin'
 import Articles from './components/Articles'
 import Article from './components/Article'
+import Profile from './components/Profile'
 import HomeArticles from './components/HomeArticles'
 import InstantSearch from 'vue-instantsearch';
 Vue.use(require('vue-moment'));
@@ -20,7 +21,9 @@ Vue.use(InstantSearch);
 //tell vue to use the router
 Vue.use(VueRouter)
 //define your routes
-
+Vue.filter('readMore', function (text, length, suffix) {
+    return text.substring(0, length) + suffix;
+});
 
   //import the hello component
 
@@ -65,6 +68,11 @@ const routes = [
           path: 'new',
           name: 'New',
           component: New
+        },
+        {
+          path: 'profile',
+          name: 'Profile',
+          component: Profile
         },
         {
           path: '',

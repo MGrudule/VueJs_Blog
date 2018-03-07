@@ -7,7 +7,7 @@
 
 
   <div  class="wrapper">
-  
+
 
   <div class="row">
       <div v-for="article in articles" :key="article.id">
@@ -16,10 +16,12 @@
 
         <div>
           <h3><router-link v-bind:to="'/articles/'+ article.id">{{ article.title }} id {{article.id}}</router-link></h3>
-          <div v-html="article.content"></div>
-          <p>{{ article.created_at }} </p>
+<span>{{ article.created_at | moment("dddd, MMMM Do YYYY") }}</span> by {{article.user.name}}
+
+          <div>{{ article.content | readMore(150, '...') }}</div>
+<hr>
         Comments:  {{article.posted_comments_count}}
-        Author: {{article.user.name}}
+
 
         </div>
       </div>

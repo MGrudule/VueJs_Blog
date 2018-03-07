@@ -51,9 +51,10 @@ login(){
 
       .then(response => {
 
-        localStorage.setItem('api_token',response.data.data.api_token);
-        localStorage.setItem('user_id',response.data.data.id);
-        localStorage.setItem('user_name',response.data.data.name);
+        localStorage.setItem('api_token',response.data.user.api_token);
+        localStorage.setItem('user_id',response.data.user.id);
+        localStorage.setItem('user_name',response.use.user.name);
+        localStorage.setItem('user_theme',response.data.data.theme);
 
 
         this.$router.push(this.$route.query.redirect || '/admin');

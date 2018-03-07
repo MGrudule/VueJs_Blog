@@ -16,7 +16,8 @@
     </form>
     <div class="button-group">
 
-    <button class="button" @click="toggle()">{{buttonText}}</button> <button  class="button" v-on:click="deleteCategory(index)"> Delete Category </button> </div>
+    <button class="button" @click="toggle()">{{buttonText}}</button>
+    <button  class="button" v-on:click="deleteCategory(index)"> Delete Category </button> </div>
 </div>
 </template>
 
@@ -36,20 +37,20 @@ export default {
      toggle() {
 
 
-       console.log(this.index)
+
 
         console.log(this.$parent.categories)
        this.isActive = !this.isActive;
        this.buttonText = this.isActive ? 'Close' : 'Edit'
      },
      deleteCategory: function (value, index) {
-       console.log(index);
-this.$emit("deleted", index);
+
+       this.$emit("deleted", index);
      },
 
      updateCategory: function (category, index) {
 
-       console.log()
+
 
      var params = new URLSearchParams();
      params.append('name', category.name);

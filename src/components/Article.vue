@@ -13,8 +13,9 @@
 
               <div>
                 <h1>{{ article.title }}</h1>
+                <span>{{ article.created_at | moment("dddd, MMMM Do YYYY") }}</span>
                 <div v-html="article.content"></div>
-                <p>{{ article.created_at }} {{article.id}}</p>
+                
 
 
               </div>
@@ -37,7 +38,7 @@
 
 
                   <div>
-
+<span>{{ posted_comment.created_at | moment("from", "now") }}</span>
                 <strong>  {{posted_comment.user.name}} </strong>  <div v-html="posted_comment.content"></div>
 
 

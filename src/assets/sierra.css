@@ -151,7 +151,7 @@ pre {
  */
 /* line 7, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_background-colors.scss */
 .background-primary {
-  background-color: #3498db;
+  background-color: #279e9a;
 }
 
 /* line 7, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_background-colors.scss */
@@ -293,7 +293,7 @@ pre {
 
 /* line 43, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_badges.scss */
 .badge-primary {
-  background-color: #3498db;
+  background-color: #279e9a;
 }
 
 /* line 43, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_badges.scss */
@@ -338,10 +338,10 @@ button {
 
 /* line 12, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button, button {
-  background-color: #e9e9e9;
+  background-color: #279e9a;
   border: 1px solid #ffffff;
   border-radius: 0.2em;
-  color: #404040;
+  color: #f1f1f1;
   display: inline-block;
   font-family: "Roboto", sans-serif;
   font-size: 12px;
@@ -440,8 +440,8 @@ button {
 
 /* line 115, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-primary, button.button-primary {
-  background-color: #3498db;
-  border: 1px solid #3498db;
+  background-color: #279e9a;
+  border: 1px solid #279e9a;
   color: #ffffff;
 }
 
@@ -472,7 +472,7 @@ button {
 .button.button-white, button.button-white {
   background-color: #ffffff;
   border: 1px solid #ffffff;
-  color: #3498db;
+  color: #279e9a;
 }
 
 /* line 146, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
@@ -492,8 +492,8 @@ button {
 /* line 159, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-outlined, button.button-outlined {
   background-color: transparent;
-  border: 1px solid #3498db;
-  color: #3498db;
+  border: 1px solid #279e9a;
+  color: #279e9a;
 }
 
 /* line 165, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
@@ -547,7 +547,7 @@ button {
 
 /* line 209, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button-link {
-  color: #3498db;
+  color: #279e9a;
   font-family: 'Lato', sans-serif;
   font-size: 12px;
   font-weight: 700;
@@ -692,12 +692,12 @@ textarea {
 .has-error .textarea,
 .has-error .input,
 .has-error .select {
-  border: 1px solid #3498db;
+  border: 1px solid #279e9a;
 }
 
 /* line 87, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .has-error .control-label {
-  color: #3498db;
+  color: #279e9a;
 }
 
 /* line 92, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
@@ -756,7 +756,7 @@ input[type=radio] {
 
 /* line 141, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .select .icon-angle-down {
-  color: #3498db;
+  color: #279e9a;
   font-size: 1.2em;
   height: 30px;
   margin-top: -10px;
@@ -830,7 +830,7 @@ select::-ms-expand {
 /* line 205, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .select-link {
   border: 0;
-  color: #3498db;
+  color: #279e9a;
 }
 
 /* line 211, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
@@ -964,7 +964,7 @@ input[type=checkbox] + label:before {
 
 /* line 326, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 input[type=radio] + label:before {
-  background-color: #3498db;
+  background-color: #279e9a;
   border-radius: 99px;
   content: '';
   display: block;
@@ -980,14 +980,14 @@ input[type=radio] + label:before {
 /* line 340, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 input[type=checkbox]:checked + label,
 input[type=radio]:checked + label {
-  color: #3498db;
+  color: #279e9a;
 }
 
 /* line 345, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 input[type=checkbox]:checked + label:before,
 input[type=radio]:checked + label:before {
   animation: radioAndCheckboxAnimation .25s;
-  color: #3498db;
+  color: #279e9a;
   transform: scale(1);
 }
 
@@ -1069,7 +1069,7 @@ input[type=radio]:checked + label:before {
 
 /* line 420, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .input-with-icon .input-icon.fa-search {
-  color: #3498db;
+  color: #279e9a;
   margin-top: -7px;
 }
 
@@ -1906,7 +1906,7 @@ input[type=radio]:checked + label:before {
 /* line 21, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_loading-bar.scss */
 .loading-bar::before {
   animation: loading 2s linear infinite;
-  background-color: #3498db;
+  background-color: #279e9a;
   content: '';
   display: block;
   height: 4px;
@@ -1968,7 +1968,7 @@ input[type=radio]:checked + label:before {
 /* line 28, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_loading-spinner.scss */
 .loading-spinner span {
   animation-timing-function: ease-in-out;
-  background-color: #3498db;
+  background-color: #279e9a;
   border-radius: 100%;
   display: block;
   height: 9px;
@@ -2164,7 +2164,7 @@ input[type=radio]:checked + label:before {
 
 /* line 58, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_paginator.scss */
 .paginator-list .paginator-list-item .paginator-list-link.active {
-  background-color: #3498db;
+  background-color: #279e9a;
   color: #404040;
 }
 
@@ -2776,14 +2776,14 @@ input[type=radio]:checked + label:before {
 
 /* line 35, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_tabs.scss */
 .tabs .tab:hover {
-  color: #3498db;
+  color: #279e9a;
   text-decoration: none;
 }
 
 /* line 40, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_tabs.scss */
 .tabs .tab.active {
-  border-bottom: 3px solid #3498db;
-  color: #3498db;
+  border-bottom: 3px solid #279e9a;
+  color: #279e9a;
 }
 
 /* line 47, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_tabs.scss */
@@ -2924,18 +2924,18 @@ p {
 
 /* line 28, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
 a {
-  color: #3498db;
+  color: #279e9a;
   text-decoration: none;
 }
 
 /* line 32, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
 a:hover {
-  color: rgba(52, 152, 219, 0.8);
+  color: rgba(39, 158, 154, 0.8);
 }
 
 /* line 36, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
 a:focus {
-  color: #3498db;
+  color: #279e9a;
 }
 
 /* line 44, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
@@ -3022,7 +3022,7 @@ a:focus {
 
 /* line 110, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
 .text-primary {
-  color: #3498db;
+  color: #279e9a;
 }
 
 /* line 110, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */

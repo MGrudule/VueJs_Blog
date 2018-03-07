@@ -7,6 +7,8 @@
               <div>
 <button class="toggle-button-close-nav">X</button>
 <hr>
+<router-link to="/admin/profile">Profile</router-link>
+<hr>
                 <router-link to="/admin">Manage Articles</router-link>
 <hr>
             <router-link to="/admin/new">New Article</router-link>
@@ -26,11 +28,12 @@
           <button class="toggle-button-nav">☰</button>
           <span> Hello {{ user_name}} </span>
 
+
       </header>
 
       <main>
         <!-- Outlet for children routes -->
-               <router-view></router-view>
+               <router-view  v-on:change="updateUser()"></router-view>
 
       </main>
   </div>
@@ -54,6 +57,14 @@ export default {
       password: '',
       email: '',
       user_name: localStorage.getItem('user_name'),
+
+    }
+  },
+
+  methods: {
+    updateUser: function () {
+
+      this.user_name = localStorage.getItem('user_name')
     }
   }
 }

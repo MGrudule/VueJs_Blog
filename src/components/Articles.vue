@@ -18,13 +18,15 @@
 
               <div>
                 <h3>{{ article.title }}</h3>
-                <div v-html="article.content"></div>
                 <span>{{ article.created_at | moment("dddd, MMMM Do YYYY") }}</span>
-                  <span>{{ article.created_at | moment("from", "now") }}</span>
+                <hr>
+                <div v-html="article.content"></div>
 
+
+<div class="button-group">
                 <button  class="" v-on:click="deleteArticle(article.id, index)"> Delete Article</button>
                   <router-link tag="button" v-bind:to="'/admin/edit/'+ article.id">Edit</router-link>
-
+</div>
               </div>
             </div>
         </div>
