@@ -15,7 +15,7 @@ import Articles from './components/Articles'
 import Article from './components/Article'
 import HomeArticles from './components/HomeArticles'
 import InstantSearch from 'vue-instantsearch';
-
+Vue.use(require('vue-moment'));
 Vue.use(InstantSearch);
 //tell vue to use the router
 Vue.use(VueRouter)

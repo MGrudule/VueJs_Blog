@@ -1,9 +1,9 @@
 <template>
 
-  <div id="app">
-    <div>
-      <router-link  tag="button" v-bind:to="'/'">Home</router-link>
-      <router-link v-if="isLoggedIn" tag="button" v-bind:to="'/admin'">Admin</router-link>
+  <div id="app" class="container">
+    <div class="">
+      <router-link class="button button-outlined "  tag="button" v-bind:to="'/'">Home</router-link>
+      <router-link class="button button-outlined " v-if="isLoggedIn" tag="button" v-bind:to="'/admin'">Admin</router-link>
       <router-link v-else tag="button" v-bind:to="'/login'">Login</router-link>
     </div>
 
@@ -42,8 +42,12 @@ this.isLoggedIn = true;
 
 </script>
 <!-- styling for the component -->
+<style lang="css">
+@import "assets/sierra.css"
+  /* Your css for this file... */
+</style>
 <style>
-#app {
+/* #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -57,45 +61,7 @@ body {
   height: 100%;
   margin: 0;
 }
-.slideout-menu {
- position: fixed;
- top: 0;
- bottom: 0;
- width: 256px;
- height: 100vh;
- overflow-y: scroll;
- -webkit-overflow-scrolling: touch;
- z-index: 999;
- display: none;
- background-color: #fcfcfc;
 
-}
-
-.slideout-menu-left {
- left: 0;
-}
-
-.slideout-menu-right {
- right: 0;
-}
-
-.slideout-panel {
-
- position: relative;
- z-index: 1;
- will-change: transform;
- min-height: 100vh;
-}
-
-.slideout-open,
-.slideout-open body,
-.slideout-open .slideout-panel {
- overflow: hidden;
-}
-
-.slideout-open .slideout-menu {
- display: block;
-}
 button, .router-link-active {
   display: inline-block;
   -ms-flex-item-align: center;
@@ -119,5 +85,5 @@ button, .router-link-active {
   color: white;
   -webkit-box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
-}
+} */
 </style>

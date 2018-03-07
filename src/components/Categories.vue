@@ -3,26 +3,30 @@
     <router-link to="/admin">Back to Articles</router-link>
 
     <form class="edit" @submit.prevent="postCategory(category)">
+<label class="label" for="name">Name</label>
+<div class="input">
+                          <input class="input" required v-model="category.name" type="text" placeholder="Category name">
+                        </div>
+<div class="row">
+                        <div class="col-xs-12 col-md-6">
+                                                    <label class="label" for="message">Description</label>
 
-      <p>
-        <input required v-model="category.name" type="text" placeholder="Category name">
 
-      </p>
-      <p>
-        <textarea required v-model="category.description" type="text" placeholder="Category description"> </textarea>
 
-      </p>
+        <textarea class="textarea" required v-model="category.description" type="text" placeholder="Category description"> </textarea>
 
+      </div>
+</div>
       <button type="submit">Submit</button>
     </form>
 <hr>
 
-    <div class="row">
+    <div  class="">
 
       <transition-group name="list" tag="p">
 
         <div v-for="(category, index) in categories" :key="category.id" class="list-item">
-          <div class="col-md-4 cards ">
+          <div class="col-md-6 ">
             <div>
               <h3>{{ category.name }} {{ category.id }}</h3>
               <div v-html="category.description"></div>
@@ -87,7 +91,7 @@ export default {
         this.loading = false;
 
         this.$delete(this.categories, index)
-      
+
 
       }, (error)  =>  {
         this.loading = false;

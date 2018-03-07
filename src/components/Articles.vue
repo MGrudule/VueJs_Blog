@@ -1,9 +1,12 @@
 <template>
   <div class="">
 
-    <div v-if="loading">
+    <div v-if="loading" class="loading-spinner">
 
-      Loading.....
+    <span></span>
+      <span></span>
+        <span></span>
+          <span></span>
     </div>
 
   <div class="wrapper">
@@ -16,7 +19,9 @@
               <div>
                 <h3>{{ article.title }}</h3>
                 <div v-html="article.content"></div>
-                <p>{{ article.created_at }} {{article.id}}</p>
+                <span>{{ article.created_at | moment("dddd, MMMM Do YYYY") }}</span>
+                  <span>{{ article.created_at | moment("from", "now") }}</span>
+
                 <button  class="" v-on:click="deleteArticle(article.id, index)"> Delete Article</button>
                   <router-link tag="button" v-bind:to="'/admin/edit/'+ article.id">Edit</router-link>
 
@@ -42,11 +47,11 @@ export default {
     }
   },
   mounted(){
-
+ this.loading = true;
    axios.get("https://peaceful-dusk-59248.herokuapp.com/api/articles")
 
    .then((response)  =>  {
-
+ this.loading = false;
      this.articles = response.data;
 
    }, (error)  =>  {

@@ -45,6 +45,7 @@
 
 
     <button class="toggle-button-search">🔍</button>  </header>
+    
 <main>
    <router-view ></router-view>
 </main>
