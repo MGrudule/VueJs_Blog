@@ -4,13 +4,18 @@
     <div class="container">
   <router-link class="button button-outlined "  tag="button" v-bind:to="'/'">Home</router-link>
       <router-link class="button button-outlined "  tag="button" v-bind:to="'/login'">Login</router-link>
-      <router-link class="button button-outlined " tag="button" v-bind:to="'/admin'"> Profile</router-link>
+      <router-link class="button button-outlined " tag="button" v-bind:to="'/admin'"> Admin</router-link>
 
 
     </div>
 <div class="container">
-
-   <router-view></router-view>
+  <button v-on:click="fontSize++">
+    Increase font size
+  </button>
+  <button v-on:click="fontSize--">
+    Decrease font size
+  </button>
+   <router-view v-bind:style="{ fontSize: fontSize + 'px' }"></router-view>
  </div>
   </div>
 </template>
@@ -24,6 +29,7 @@ mixins:[isLoggedMixin],
 
 data () {
   return {
+    fontSize: 10,
     isLoggedIn: false,
 
     user_name: localStorage.getItem('user_name'),
@@ -57,50 +63,12 @@ this.isLoggedIn = true;
   transition-delay: .3s;
 }
 .slide-fade-leave-active {
-  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+  transition: all .2s ease;
 }
 .slide-fade-enter, .slide-fade-leave-to {
 
-  transform: translateY(20%);
+
   opacity: 0;
 }
-/* #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  background-color:white;
 
-}
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0;
-}
-
-button, .router-link-active {
-  display: inline-block;
-  -ms-flex-item-align: center;
-      align-self: center;
-  background: white;
-  padding: 0.2rem 0.2rem;
-  margin: 0 0.2rem;
-  -webkit-transition: all 0.5s ease;
-  transition: all 0.5s ease;
-  color: #41403e;
-  font-size: 1rem;
-  letter-spacing: 1px;
-  outline: none;
-  -webkit-box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
-          box-shadow: 20px 38px 34px -26px rgba(0, 0, 0, 0.2);
-  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
-
-}
- button:hover, .router-link-active:hover {
-  background: red;
-  color: white;
-  -webkit-box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 8px 4px -6px rgba(0, 0, 0, 0.3);
-} */
 </style>
