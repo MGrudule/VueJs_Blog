@@ -1,7 +1,7 @@
 <template>
   <div class="">
 
-    <div v-if="loading" class="loading-spinner"> 
+    <div v-if="loading" class="loading-spinner">
 
     <span></span>
       <span></span>
@@ -18,10 +18,22 @@
 
               <div>
                 <h3 >{{ article.title }}</h3>
-                <span>{{ article.created_at | moment("dddd, MMMM Do YYYY") }}</span>
-                <hr>
-                <div v-html="article.content"></div>
+                <span>{{ article.created_at | moment("dddd, MMMM Do YYYY") }}</span>  <hr>
 
+
+                <div v-html="article.content"></div>
+                <div class="row">
+                  <ul class="tags">
+                  <li class="tag" v-for="category in article.articles_category" v-if="category.category !== null">
+
+
+
+                    <span class="tag"> {{category.category.name}} </span>
+
+
+                </li>
+              </ul>
+                </div>
 
 <div class="button-group">
                 <button  class="" v-on:click="deleteArticle(article.id, index)"> Delete Article</button>

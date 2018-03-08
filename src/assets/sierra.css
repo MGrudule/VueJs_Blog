@@ -2870,21 +2870,10 @@ input[type=radio]:checked + label:before {
 }
 
 /* line 71, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_tags.scss */
-.tags a.tag {
+.tags span.tag {
   color: #404040;
   display: inline-block;
   text-decoration: none;
-}
-
-/* line 76, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_tags.scss */
-.tags a.tag:hover {
-  background-color: white;
-  text-decoration: none;
-}
-
-/* line 79, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_tags.scss */
-.tags a.tag:hover::before {
-  border-left: 10px solid white;
 }
 
 /**

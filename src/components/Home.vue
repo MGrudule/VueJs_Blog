@@ -45,9 +45,9 @@
 
 
     <button class="toggle-button-search">🔍</button>  </header>
-    
+
 <main>
-   <router-view ></router-view>
+  <transition name="slide-fade">  <router-view ></router-view> </transition>
 </main>
   </div>
 </div>

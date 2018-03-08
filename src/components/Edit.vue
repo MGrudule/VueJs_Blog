@@ -1,6 +1,6 @@
 <template>
   <div class="admin-edit">
-    This is {{$route.params.id}}
+    
 
     <div>
       <form class="edit" @submit.prevent="updateArticle(article)">

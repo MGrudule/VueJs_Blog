@@ -2,13 +2,15 @@
 
   <div id="app" class="container">
     <div class="">
-      <router-link class="button button-outlined "  tag="button" v-bind:to="'/'">Home</router-link>
-      <router-link class="button button-outlined " v-if="isLoggedIn" tag="button" v-bind:to="'/admin'">Admin</router-link>
-      <router-link v-else tag="button" v-bind:to="'/login'">Login</router-link>
+  <router-link class="button button-outlined "  tag="button" v-bind:to="'/'">Home</router-link>
+      <router-link class="button button-outlined "  tag="button" v-bind:to="'/login'">Login</router-link>
+      <router-link class="button button-outlined " tag="button" v-bind:to="'/admin'"> Profile</router-link>
+      <router-link class="button button-transparent text-big" v-if="isLoggedIn" tag="button" v-bind:to="'/admin/new'">  ✏  </router-link>
+
     </div>
 
 
-<router-view></router-view>
+   <router-view></router-view>
   </div>
 </template>
 
@@ -44,9 +46,23 @@ this.isLoggedIn = true;
 <!-- styling for the component -->
 <style lang="css">
 @import "assets/sierra.css"
+
   /* Your css for this file... */
 </style>
 <style>
+
+.slide-fade-enter-active {
+  transition: all .4s ease;
+  transition-delay: .3s;
+}
+.slide-fade-leave-active {
+  transition: all .3s cubic-bezier(1.0, 0.5, 0.8, 1.0);
+}
+.slide-fade-enter, .slide-fade-leave-to {
+
+  transform: translateY(20%);
+  opacity: 0;
+}
 /* #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

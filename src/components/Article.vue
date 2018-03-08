@@ -7,20 +7,48 @@
     </div>
 
   <div class="wrapper">
+      <router-link tag="button" to="/">Back to Articles</router-link>
       <div class="row">
 
-            <div class="col-md-4 cards">
+            <div class="col-m-8 cards">
 
               <div>
                 <h1>{{ article.title }}</h1>
                 <span>{{ article.created_at | moment("dddd, MMMM Do YYYY") }}</span>
                 <div v-html="article.content"></div>
-                
+
 
 
               </div>
-              <hr>
+              <div class="row">
+                <ul class="tags">
+                <li class="tag" v-for="category in article.articles_category" v-if="category.category !== null">
 
+
+
+                  <span class="tag"> {{category.category.name}} </span>
+
+
+              </li>
+            </ul>
+              </div>
+              <hr>
+              <h5> Comments </h5>
+              <div class="row" v-for="posted_comment in article.posted_comments" >
+
+                <div  class="col-md-6 ">
+
+
+                  <div>
+                    <span>{{ posted_comment.created_at | moment("from", "now") }}</span>
+                <strong>  {{posted_comment.user.name}} </strong>  <div v-html="posted_comment.content"></div>
+
+
+                  </div>
+                  <hr>
+                </div>
+            </div>
+            <div class="row">
               <form class="edit" @submit.prevent="postComment(comment)">
 
 
@@ -30,21 +58,6 @@
 
                 <button type="submit">Submit</button>
               </form>
-              <hr>
-              <h5> comments </h5>
-              <div v-for="posted_comment in article.posted_comments" >
-
-                <div  class="col-md-4 cards">
-
-
-                  <div>
-<span>{{ posted_comment.created_at | moment("from", "now") }}</span>
-                <strong>  {{posted_comment.user.name}} </strong>  <div v-html="posted_comment.content"></div>
-
-
-                  </div>
-                  <hr>
-                </div>
             </div>
             </div>
 

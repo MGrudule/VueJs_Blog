@@ -28,7 +28,18 @@
           <div>{{ article.content | readMore(150, '...') }}</div>
 <hr>
         Comments:  {{article.posted_comments_count}}
+        <div class="row">
+          <ul class="tags">
+          <li class="tag" v-for="category in article.articles_category" v-if="category.category !== null">
 
+
+
+            <span class="tag"> {{category.category.name}} </span>
+
+
+        </li>
+      </ul>
+        </div>
 
         </div>
       </div>
