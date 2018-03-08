@@ -357,33 +357,34 @@ button {
 }
 
 /* line 32, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
-.button:focus, .button:hover, .button:active, button:focus, button:hover, button:active {
+.button:focus, .button:hover, .button:active, .button.router-link-exact-active, button:focus, button:hover, button:active, button.router-link-exact-active {
   color: #404040;
+  background-color: #2ecc71;
 }
 
-/* line 38, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 40, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button:hover, button:hover {
   cursor: pointer;
   opacity: .8;
   text-decoration: none;
 }
 
-/* line 44, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
-.button:active, button:active {
+/* line 46, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+.button:active, .button.router-link-active, button:active, button.router-link-active {
   opacity: 1;
 }
 
-/* line 48, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 51, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button:first-child, button:first-child {
   margin-left: 0;
 }
 
-/* line 52, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 55, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button:last-child, button:last-child {
   margin-right: 0;
 }
 
-/* line 58, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 61, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-big, button.button-big {
   border-radius: 0.2em;
   font-size: 16px;
@@ -392,13 +393,13 @@ button {
 }
 
 @media (min-width: 992px) {
-  /* line 58, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+  /* line 61, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
   .button.button-big, button.button-big {
     padding: 10px 40px;
   }
 }
 
-/* line 71, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 74, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-small, button.button-small {
   border-radius: 0.2em;
   font-size: 11px;
@@ -406,7 +407,7 @@ button {
   padding: 6px 20px;
 }
 
-/* line 81, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 84, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-huge, button.button-huge {
   border-radius: 0.2em;
   font-size: 16px;
@@ -415,7 +416,7 @@ button {
 }
 
 @media (min-width: 992px) {
-  /* line 81, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+  /* line 84, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
   .button.button-huge, button.button-huge {
     border-radius: 0.2em;
     font-size: 18px;
@@ -424,12 +425,12 @@ button {
   }
 }
 
-/* line 100, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 103, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-huge i, button.button-huge i {
   font-size: 20px;
 }
 
-/* line 105, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 108, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-large, button.button-large {
   display: block;
   margin-left: auto;
@@ -438,71 +439,71 @@ button {
   width: 100%;
 }
 
-/* line 115, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 118, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-primary, button.button-primary {
   background-color: #279e9a;
   border: 1px solid #279e9a;
   color: #ffffff;
 }
 
-/* line 120, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 123, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-primary:hover, button.button-primary:hover {
   color: #ffffff;
 }
 
-/* line 125, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 128, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-secondary, button.button-secondary {
   background-color: #2ecc71;
   border: 1px solid #2ecc71;
   color: #ffffff;
 }
 
-/* line 130, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 133, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-secondary:hover, button.button-secondary:hover {
   color: #ffffff;
 }
 
-/* line 135, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 138, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-transparent, button.button-transparent {
   background-color: transparent;
   border: 1px solid transparent;
 }
 
-/* line 140, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 143, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-white, button.button-white {
   background-color: #ffffff;
   border: 1px solid #ffffff;
   color: #279e9a;
 }
 
-/* line 146, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 149, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-green, button.button-green {
   background-color: #4caf50;
   border-color: #4caf50;
   color: #ffffff;
 }
 
-/* line 152, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 155, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-red, button.button-red {
   background-color: #e74c3c;
   border-color: #e74c3c;
   color: #ffffff;
 }
 
-/* line 159, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 162, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-outlined, button.button-outlined {
   background-color: transparent;
   border: 1px solid #279e9a;
   color: #279e9a;
 }
 
-/* line 165, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 168, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-disabled, button.button-disabled {
   cursor: default;
   opacity: .4;
 }
 
-/* line 170, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 173, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-only-icon, button.button-only-icon {
   height: 43px;
   line-height: 43px;
@@ -510,13 +511,13 @@ button {
   width: 43px;
 }
 
-/* line 176, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 179, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button.button-only-icon i, button.button-only-icon i {
   margin-left: 0;
   margin-right: 0;
 }
 
-/* line 183, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 186, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button i, button i {
   margin-bottom: -2%;
   margin-left: .8em;
@@ -525,27 +526,27 @@ button {
   transition: all .3s ease;
 }
 
-/* line 190, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 193, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button i:last-child, button i:last-child {
   margin-right: 0;
 }
 
-/* line 194, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 197, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button i:first-child, button i:first-child {
   margin-left: 0;
 }
 
-/* line 198, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 201, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button i::before, button i::before {
   float: left;
 }
 
-/* line 203, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 206, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button i.fa-lg, button i.fa-lg {
   margin-bottom: 0;
 }
 
-/* line 209, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 212, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button-link {
   color: #279e9a;
   font-family: 'Lato', sans-serif;
@@ -554,7 +555,7 @@ button {
   text-transform: uppercase;
 }
 
-/* line 216, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 219, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button-link i {
   font-size: 18px;
   line-height: 14px;
@@ -564,34 +565,34 @@ button {
   transition: all .3s ease;
 }
 
-/* line 224, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 227, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button-link i::before {
   float: left;
 }
 
-/* line 230, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 233, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button-link.button-link-rotated i {
   transform: rotate(-180deg);
 }
 
-/* line 237, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 240, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button-group {
   white-space: nowrap;
 }
 
-/* line 240, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 243, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button-group .button {
   display: inline-block;
   margin: 0;
 }
 
-/* line 244, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 247, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button-group .button:not(:first-child) {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
 
-/* line 249, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
+/* line 252, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_buttons.scss */
 .button-group .button:not(:last-child) {
   border-bottom-right-radius: 0;
   border-right: 0;
@@ -629,7 +630,7 @@ select,
 input[type=text],
 textarea {
   border-radius: 3px;
-  font-size: 1.3em;
+  width: 100%;
   line-height: 1.5em;
   transition: background-color .2s ease-in-out;
 }
@@ -648,7 +649,7 @@ textarea {
   select,
   input[type=text],
   textarea {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 }
 
@@ -656,6 +657,8 @@ textarea {
 .textarea,
 .input,
 .select {
+  width: auto;
+  max-width: 100%;
   border: 0;
   border: 1px solid #dddddd;
   border-radius: 3px;
@@ -665,14 +668,14 @@ textarea {
   margin-bottom: 20px;
 }
 
-/* line 62, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 64, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .textarea :focus,
 .input :focus,
 .select :focus {
   outline: none;
 }
 
-/* line 66, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 68, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .textarea.error,
 .input.error,
 .select.error {
@@ -680,7 +683,7 @@ textarea {
   margin-bottom: 0;
 }
 
-/* line 71, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 73, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .textarea.small,
 .input.small,
 .select.small {
@@ -688,19 +691,19 @@ textarea {
   padding: 4px 6px;
 }
 
-/* line 79, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 81, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .has-error .textarea,
 .has-error .input,
 .has-error .select {
   border: 1px solid #279e9a;
 }
 
-/* line 87, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 89, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .has-error .control-label {
   color: #279e9a;
 }
 
-/* line 92, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 94, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 label.error {
   color: #e74c3c;
   font-size: 13px;
@@ -710,17 +713,17 @@ label.error {
   top: -16px;
 }
 
-/* line 101, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 103, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 input[type=checkbox] {
   appearance: checkbox;
 }
 
-/* line 105, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 107, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 input[type=radio] {
   appearance: radio;
 }
 
-/* line 110, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 112, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .select {
   background-color: #f1f1f1;
   display: inline-block;
@@ -729,7 +732,7 @@ input[type=radio] {
   position: relative;
 }
 
-/* line 117, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 119, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .select.full-width {
   display: inline-block;
   margin-left: 0;
@@ -737,12 +740,12 @@ input[type=radio] {
   width: 100%;
 }
 
-/* line 124, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 126, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .select:last-child {
   margin-right: 0;
 }
 
-/* line 129, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 131, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .select .fa-angle-down {
   color: #969da6;
   font-size: 25px;
@@ -754,7 +757,7 @@ input[type=radio] {
   z-index: 1;
 }
 
-/* line 141, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 143, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .select .icon-angle-down {
   color: #279e9a;
   font-size: 1.2em;
@@ -766,7 +769,7 @@ input[type=radio] {
   z-index: 1;
 }
 
-/* line 152, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 154, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .select select {
   appearance: none;
   background-color: transparent;
@@ -782,38 +785,38 @@ input[type=radio] {
 }
 
 @media (min-width: 768px) {
-  /* line 152, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+  /* line 154, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
   .select select {
     padding: 8px 15px;
   }
 }
 
-/* line 169, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 171, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .select select:active, .select select:focus {
   background-color: #fefefe;
   border: 0;
   outline: none;
 }
 
-/* line 176, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 178, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .select select:active + i,
 .select select:focus + i {
   z-index: 2;
 }
 
-/* line 181, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 183, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .select select option {
   background-color: #f1f1f1;
   color: #404040;
   height: 30px;
 }
 
-/* line 188, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 190, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .select.select-small {
   max-width: 150px;
 }
 
-/* line 191, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 193, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .select.select-small select {
   font-size: 14px !important;
   height: 24px;
@@ -822,54 +825,53 @@ input[type=radio] {
   padding-right: 27px;
 }
 
-/* line 201, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 203, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 select::-ms-expand {
   display: none;
 }
 
-/* line 205, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 207, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .select-link {
   border: 0;
   color: #279e9a;
 }
 
-/* line 211, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 213, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .textarea {
-  background-color: #f1f1f1;
   padding: 0;
   width: 100%;
 }
 
-/* line 216, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 218, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .textarea textarea {
+  box-sizing: border-box;
   background: transparent;
-  border: 0;
+  border: 1px solid #279e9a;
   color: #404040;
   display: block;
   font-family: "Roboto", sans-serif;
-  padding: 10px 15px;
+  padding: 10px 10px;
   width: 100%;
 }
 
-/* line 225, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 228, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .textarea textarea:focus, .textarea textarea:active {
-  border: 0;
+  border: 3px solid #279e9a;
   outline: none;
-  background-color: #fefefe;
 }
 
-/* line 234, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 237, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 textarea {
   min-height: 120px;
 }
 
-/* line 239, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 242, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .form-button-wrap {
   text-align: center;
 }
 
 @media (min-width: 768px) {
-  /* line 239, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+  /* line 242, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
   .form-button-wrap {
     text-align: right;
   }
@@ -892,7 +894,7 @@ textarea {
  *  </div>
  *
  */
-/* line 265, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 268, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .checkbox,
 .radio {
   margin: 0;
@@ -902,7 +904,7 @@ textarea {
   position: relative;
 }
 
-/* line 274, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 277, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 input[type=checkbox] + label,
 input[type=radio] + label {
   display: block;
@@ -912,17 +914,17 @@ input[type=radio] + label {
   white-space: nowrap;
 }
 
-/* line 284, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 287, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 input[type=checkbox] {
   display: none;
 }
 
-/* line 285, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 288, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 input[type=radio] {
   display: none;
 }
 
-/* line 287, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 290, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 input[type=checkbox] + label:after,
 input[type=checkbox] + label:before,
 input[type=radio] + label:after,
@@ -938,7 +940,7 @@ input[type=radio] + label:before {
   left: 0;
 }
 
-/* line 303, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 306, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 input[type=checkbox] + label:after,
 input[type=radio] + label:after {
   background-color: #f1f1f1;
@@ -947,12 +949,12 @@ input[type=radio] + label:after {
   content: '';
 }
 
-/* line 312, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 315, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 input[type=radio] + label:after {
   border-radius: 99px;
 }
 
-/* line 317, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 320, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 input[type=checkbox] + label:before {
   content: "\f00c";
   font-family: FontAwesome;
@@ -962,7 +964,7 @@ input[type=checkbox] + label:before {
   z-index: 1;
 }
 
-/* line 326, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 329, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 input[type=radio] + label:before {
   background-color: #279e9a;
   border-radius: 99px;
@@ -977,13 +979,13 @@ input[type=radio] + label:before {
   z-index: 1;
 }
 
-/* line 340, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 343, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 input[type=checkbox]:checked + label,
 input[type=radio]:checked + label {
   color: #279e9a;
 }
 
-/* line 345, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 348, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 input[type=checkbox]:checked + label:before,
 input[type=radio]:checked + label:before {
   animation: radioAndCheckboxAnimation .25s;
@@ -1003,7 +1005,7 @@ input[type=radio]:checked + label:before {
   }
 }
 
-/* line 367, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 370, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .input {
   background-color: #f1f1f1;
   display: inline-block;
@@ -1012,13 +1014,13 @@ input[type=radio]:checked + label:before {
   position: relative;
 }
 
-/* line 374, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 377, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .input :focus,
 .input :active {
   background-color: #fefefe;
 }
 
-/* line 379, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 382, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .input.full-width {
   display: inline-block;
   margin-left: 0;
@@ -1026,7 +1028,7 @@ input[type=radio]:checked + label:before {
   width: 100%;
 }
 
-/* line 386, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 389, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .input input {
   background: transparent;
   border: 0;
@@ -1042,23 +1044,23 @@ input[type=radio]:checked + label:before {
 }
 
 @media (min-width: 768px) {
-  /* line 386, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+  /* line 389, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
   .input input {
     padding: 8px 15px;
   }
 }
 
-/* line 406, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 409, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .input-with-icon {
   position: relative;
 }
 
-/* line 409, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 412, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .input-with-icon input {
   padding-right: 42px;
 }
 
-/* line 413, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 416, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .input-with-icon .input-icon {
   color: #969da6;
   margin-top: -6px;
@@ -1067,13 +1069,13 @@ input[type=radio]:checked + label:before {
   top: 50%;
 }
 
-/* line 420, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 423, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .input-with-icon .input-icon.fa-search {
   color: #279e9a;
   margin-top: -7px;
 }
 
-/* line 427, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 430, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .input-with-icon button.input-icon {
   background: none;
   border: 0;
@@ -1081,13 +1083,13 @@ input[type=radio]:checked + label:before {
   padding: 0;
 }
 
-/* line 437, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 440, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .input-icon input {
   padding: 0;
   width: 0;
 }
 
-/* line 442, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 445, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .input-icon i {
   padding: 14px 15px 14px 12px;
 }
@@ -1106,12 +1108,12 @@ input[type=radio]:checked + label:before {
  *  </div>
  *
  */
-/* line 463, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 466, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .input-group {
   margin-bottom: 20px;
 }
 
-/* line 466, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 469, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .input-group .textarea,
 .input-group .input,
 .input-group .select {
@@ -1137,7 +1139,7 @@ input[type=radio]:checked + label:before {
  *    </div>
  *  </div>
  */
-/* line 493, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 496, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .form-group {
   background-color: #f1f1f1;
   border: 1px solid #dddddd;
@@ -1146,32 +1148,32 @@ input[type=radio]:checked + label:before {
   margin-bottom: 20px;
 }
 
-/* line 500, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 503, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .form-group .textarea,
 .form-group .input,
 .form-group .select {
   margin-bottom: 0;
 }
 
-/* line 506, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 509, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .form-group .form-group-item {
   border: 0;
   border-radius: 0;
   margin-right: 0;
 }
 
-/* line 511, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 514, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .form-group .form-group-item:last-child {
   border-right: 0;
 }
 
-/* line 518, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 521, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .form-row {
   margin-left: -3px !important;
   margin-right: -3px !important;
 }
 
-/* line 523, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 526, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .form-row div[class^="col"] {
   padding-left: 3px;
   padding-right: 3px;
@@ -1198,37 +1200,37 @@ input[type=radio]:checked + label:before {
  *    </button>
  *  </div>
  **/
-/* line 551, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 554, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .form-collapse {
   display: flex;
   margin-bottom: 20px;
 }
 
-/* line 555, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 558, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .form-collapse .item-main {
   flex: 1;
 }
 
-/* line 559, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 562, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .form-collapse .item {
   border-radius: 0;
   font-size: 15px;
   margin: 0;
 }
 
-/* line 564, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 567, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .form-collapse .item:first-child {
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
 }
 
-/* line 569, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 572, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .form-collapse .item:last-child {
   border-bottom-right-radius: 3px;
   border-top-right-radius: 3px;
 }
 
-/* line 574, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+/* line 577, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .form-collapse .item:not(:last-child) {
   border-right: 0;
 }
@@ -1801,7 +1803,12 @@ input[type=radio]:checked + label:before {
   }
 }
 
-/* line 18, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
+/* line 17, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
+.align-button {
+  text-align: right;
+}
+
+/* line 21, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
 .container {
   margin: 0 auto;
   max-width: 1380px;
@@ -1811,14 +1818,14 @@ input[type=radio]:checked + label:before {
 }
 
 @media (min-width: 768px) {
-  /* line 18, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
+  /* line 21, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
   .container {
     padding-left: 30px;
     padding-right: 30px;
   }
 }
 
-/* line 31, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
+/* line 34, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
 .container-medium {
   margin: 0 auto;
   max-width: 944px;
@@ -1827,14 +1834,14 @@ input[type=radio]:checked + label:before {
 }
 
 @media (min-width: 768px) {
-  /* line 31, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
+  /* line 34, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
   .container-medium {
     padding-left: 30px;
     padding-right: 30px;
   }
 }
 
-/* line 43, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
+/* line 46, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
 .container-small {
   margin: 0 auto;
   max-width: 400px;
@@ -1843,19 +1850,19 @@ input[type=radio]:checked + label:before {
 }
 
 @media (min-width: 768px) {
-  /* line 43, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
+  /* line 46, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
   .container-small {
     padding-left: 30px;
     padding-right: 30px;
   }
 }
 
-/* line 60, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
+/* line 63, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
 .separator {
   border-bottom: 1px solid #dddddd;
 }
 
-/* line 66, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
+/* line 69, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
 .main-wrap {
   overflow: hidden;
   position: relative;
@@ -1863,13 +1870,13 @@ input[type=radio]:checked + label:before {
 }
 
 @media (min-width: 1280px) {
-  /* line 66, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
+  /* line 69, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
   .main-wrap {
     padding-left: 250px;
   }
 }
 
-/* line 77, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
+/* line 80, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
 .main-content {
   float: right;
   margin-left: 0;
@@ -1878,7 +1885,7 @@ input[type=radio]:checked + label:before {
   width: 100%;
 }
 
-/* line 84, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
+/* line 87, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_layout.scss */
 .main-content::before, .main-content::after {
   clear: none;
 }
@@ -2833,9 +2840,9 @@ input[type=radio]:checked + label:before {
 
 /* line 34, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_tags.scss */
 .tags .tag {
-  background-color: #f1f1f1;
+  background-color: #279e9a;
   border-radius: 3px 0 0 3px;
-  color: #404040;
+  color: #f1f1f1;
   display: inline-block;
   float: left;
   line-height: 34px;
@@ -2846,7 +2853,7 @@ input[type=radio]:checked + label:before {
 /* line 45, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_tags.scss */
 .tags .tag::before {
   border-bottom: 17px solid transparent;
-  border-left: 10px solid #f1f1f1;
+  border-left: 10px solid #279e9a;
   border-top: 17px solid transparent;
   content: '';
   height: 0;
@@ -2871,7 +2878,7 @@ input[type=radio]:checked + label:before {
 
 /* line 71, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_tags.scss */
 .tags span.tag {
-  color: #404040;
+  color: #f1f1f1;
   display: inline-block;
   text-decoration: none;
 }
@@ -3156,17 +3163,22 @@ button.text-gray {
   text-align: center;
 }
 
-/* line 155, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
+/* line 154, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
+.text-justify {
+  text-align: justify;
+}
+
+/* line 158, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
 .text-lato {
   font-family: 'Lato', sans-serif;
 }
 
-/* line 160, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
+/* line 163, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
 .text-with-subtitle {
   margin-bottom: 0 !important;
 }
 
-/* line 163, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
+/* line 166, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
 .text-with-subtitle + .text-huge,
 .text-with-subtitle + .text-big,
 .text-with-subtitle + .text-medium,
@@ -3175,18 +3187,43 @@ button.text-gray {
   margin-top: .5em;
 }
 
-/* line 171, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 300;
-  font-family: "Playfair Display", serif;
+/* line 173, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
+.text-x-small {
+  font-size: 10px;
+  font-style: italic;
 }
 
 /* line 178, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
+h3,
+h4 {
+  font-weight: 300;
+  font-family: "Lato", serif;
+  margin-bottom: 0.1em;
+  margin-top: 0.2em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* line 187, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
+h1,
+h2 {
+  font-weight: 300;
+  font-family: "Lato", serif;
+  margin-bottom: 0.5em;
+  margin-top: 0.2em;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+/* line 197, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
 h3 {
-  font-size: 1.2em;
+  font-size: 1.43em;
+}
+
+/* line 200, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
+h1,
+h2 {
+  font-size: 1.69em;
 }
 
 /* line 1, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_slidemenu.scss */

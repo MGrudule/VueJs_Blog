@@ -1,55 +1,49 @@
 <template>
 
   <div >
+<!-- mobile navigation -->
+    <Slideout v-if="$mq === 'mobile'" menu="#navigation" panel="main" :toggleSelectors="['.toggle-button-nav', '.toggle-button-close-nav']" >
 
-    <Slideout v-if="$mq === 'mobile'" menu="#navigation" panel="#main" :toggleSelectors="['.toggle-button-nav', '.toggle-button-close-nav']" >
-            <nav id="navigation">
-              <div>
-<button class="toggle-button-close-nav">X</button>
-<hr>
-<router-link to="/admin/profile">Profile</router-link>
-<hr>
-                <router-link to="/admin">Manage Articles</router-link>
-<hr>
-            <router-link to="/admin/new">New Article</router-link>
-            <hr>
-            <router-link to="/admin/categories">Categories</router-link>
+          <nav id="navigation">
 
-              </div>
-            </nav>
+          <button class="toggle-button-close-nav">X</button>
+          <hr>
+          <router-link to="/admin/profile">Profile</router-link>
+          <hr>
+          <router-link to="/admin">Manage Articles</router-link>
+          <hr>
+          <router-link to="/admin/new">New Article  ✏ </router-link>
+          <hr>
+          <router-link to="/admin/categories">Categories</router-link>
+
+          </nav>
 
     </Slideout>
-    <nav v-if="$mq === 'md'" id="navigation">
 
+
+    <nav v-if="$mq === 'md'" id="navigation">
 
     <router-link tag="button" to="/admin/profile">Profile</router-link>
 
-        <router-link tag="button" to="/admin">Manage Articles</router-link>
+    <router-link tag="button" to="/admin">Manage Articles</router-link>
 
     <router-link tag="button" to="/admin/new">New Article</router-link>
 
     <router-link tag="button" to="/admin/categories">Categories</router-link>
 
-
     </nav>
 
-  <div id="main">
+    <button v-if="$mq === 'mobile'" class="toggle-button-nav">☰</button>
+    <main>
 
 
-      <header>
-          <button v-if="$mq === 'mobile'" class="toggle-button-nav">☰</button>
-
-          <span> Hello {{ user_name}} </span>
 
 
-      </header>
+            <!-- Outlet for children routes -->
+                   <router-view  v-on:change="updateUser()"></router-view>
 
-      <main>
-        <!-- Outlet for children routes -->
-               <router-view  v-on:change="updateUser()"></router-view>
+    </main>
 
-      </main>
-  </div>
 </div>
 </template>
 
@@ -65,10 +59,7 @@ export default {
 },
   data () {
     return {
-      articles: [],
       loading: false,
-      password: '',
-      email: '',
       user_name: localStorage.getItem('user_name'),
 
     }

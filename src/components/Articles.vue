@@ -1,50 +1,48 @@
 <template>
-  <div class="">
+  <div class="section">
 
     <div v-if="loading" class="loading-spinner">
-
     <span></span>
       <span></span>
         <span></span>
           <span></span>
     </div>
 
-  <div class="wrapper">
-      <div class="row">
-        <transition-group name="list" tag="p">
-          <div v-for="(article, index) in articles" :key="article.id">
-            <div class="col-md-4 list-item">
 
 
-              <div>
+        <transition-group name="list" tag="div" class="row">
+
+          <div class="col-md-6 list-item" v-for="(article, index) in articles" :key="article.id">
+
+
+
+
                 <h3 >{{ article.title }}</h3>
                 <span>{{ article.created_at | moment("dddd, MMMM Do YYYY") }}</span>  <hr>
 
 
-                <div v-html="article.content"></div>
-                <div class="row">
-                  <ul class="tags">
-                  <li class="tag" v-for="category in article.articles_category" v-if="category.category !== null">
+                <div class="text-justify" v-html="article.content"></div>
+                <div class="row ">
+                  <ul class="tags col-xs-3">
+                    <li class="tag" v-for="category in article.articles_category" v-if="category.category !== null">
 
+                      <span class="tag"> {{category.category.name}} </span>
 
-
-                    <span class="tag"> {{category.category.name}} </span>
-
-
-                </li>
-              </ul>
+                    </li>
+                  </ul>
                 </div>
 
-<div class="button-group">
-                <button  class="" v-on:click="deleteArticle(article.id, index)"> Delete Article</button>
+                <div class="button-group">
+                    <button  class="" v-on:click="deleteArticle(article.id, index)"> Delete Article</button>
                   <router-link tag="button" v-bind:to="'/admin/edit/'+ article.id">Edit</router-link>
-</div>
-              </div>
-            </div>
-        </div>
+                </div>
+
+
+          </div>
+
          </transition-group>
-        </div>
-      </div>
+    
+
   </div>
 </template>
 
@@ -61,28 +59,20 @@ export default {
     }
   },
   mounted(){
- this.loading = true;
-   axios.get("https://peaceful-dusk-59248.herokuapp.com/api/articles")
+        this.loading = true;
+        axios.get("https://peaceful-dusk-59248.herokuapp.com/api/articles")
 
-   .then((response)  =>  {
- this.loading = false;
-     this.articles = response.data;
+         .then((response)  =>  {
+           this.loading = false;
+           this.articles = response.data;
 
-   }, (error)  =>  {
-     this.loading = false;
-   })
+         }, (error)  =>  {
+           this.loading = false;
+       })
  },
   methods: {
 
-
-
-
-
-
-
     deleteArticle: function (value, index) {
-
-
 
       this.loading = true;
       axios.delete("http://peaceful-dusk-59248.herokuapp.com/api/auth/articles/" + value,
@@ -92,7 +82,7 @@ export default {
 
       .then((response)  =>  {
       this.loading = false;
-this.$delete(this.articles, index)
+      this.$delete(this.articles, index)
 
       }, (error)  =>  {
         this.loading = false;
@@ -109,7 +99,7 @@ this.$delete(this.articles, index)
 <style >
 .list-item {
   display: inline-block;
-  margin-right: 10px;
+
 }
 .list-enter-active, .list-leave-active {
   transition: all 1s;

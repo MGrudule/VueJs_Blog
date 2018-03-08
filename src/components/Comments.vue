@@ -4,10 +4,10 @@
 
  <form class="edit" @submit.prevent="postComment(comment)">
 
-
+<div class="textarea">
      <textarea required v-model="content" type="text" placeholder="Article content"> </textarea>
 
-   </p>
+   </div>
 
    <button type="submit">Submit</button>
  </form>

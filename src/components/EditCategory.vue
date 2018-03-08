@@ -3,14 +3,13 @@
 
     <form  v-show="isActive" class="edit" @submit.prevent="updateCategory(category, index)">
 
-      <p>
-        <input type="text" v-model="category.name">
-
-      </p>
-      <p>
+<div>
+        <input class="input" type="text" v-model="category.name">
+</div>
+    <div class="textarea">
         <textarea id="categoryDescription" type="text" v-model="category.description" > </textarea>
 
-      </p>
+      </div>
 
       <button type="submit">Update</button>
     </form>
@@ -35,11 +34,6 @@ export default {
     }},
    methods: {
      toggle() {
-
-
-
-
-        console.log(this.$parent.categories)
        this.isActive = !this.isActive;
        this.buttonText = this.isActive ? 'Close' : 'Edit'
      },
@@ -49,10 +43,7 @@ export default {
      },
 
      updateCategory: function (category, index) {
-
-
-
-     var params = new URLSearchParams();
+       var params = new URLSearchParams();
      params.append('name', category.name);
      params.append('description', category.description);
 

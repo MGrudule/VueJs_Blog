@@ -1,25 +1,32 @@
 <template>
-  <div id="main">
+  <div class="row ">
 
-    <main>
-      <div>
-        Register or <router-link to="/login" tag="button">Log-in</router-link>
-         <hr>
-         <form class="register" @submit.prevent="register">
-           
-           <label>Name</label>
+    <div class="col-md-offset-4 col-md-4">
+        Register or <router-link to="/login" tag="button">Login</router-link>
+      </div>
+         <form class="register input-group col-md-offset-4 col-md-4" @submit.prevent="register">
+
+           <div class="input input-with-icon full-width">
            <input required v-model="name" type="text" placeholder="Name"/>
-           <label>Email</label>
-           <input required v-model="email" type="email" placeholder="Email"/>
-           <label>Password</label>
-           <input required v-model="password" type="password" placeholder="Password"/>
-           <input required v-model="password_c" type="password" placeholder="Password "/>
-           <hr/>
-           <button type="submit">Login</button>
-         </form>
-       </div>
+           <i class="input-icon fa fa-user"></i>
+          </div>
 
-    </main>
+           <div class="input input-with-icon full-width">
+           <input required v-model="email" type="email" placeholder="Email"/>
+           <i class="input-icon fa fa-envelope"></i>
+         </div>
+       
+           <div class="input input-with-icon full-width">
+           <input required v-model="password" type="password" placeholder="Password"/>
+         <i class="input-icon fa fa-key"></i>
+       </div>
+           <div class="input input-with-icon full-width">
+           <input required v-model="password_c" type="password" placeholder="Password "/>
+         <i class="input-icon fa fa-key"></i></div>
+
+           <button type="submit">Register</button>
+         </form>
+
   </div>
 </template>
 

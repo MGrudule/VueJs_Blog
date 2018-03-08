@@ -1,16 +1,17 @@
 <template>
 
-  <div id="app" class="container">
-    <div class="">
+  <div id="app" >
+    <div class="container">
   <router-link class="button button-outlined "  tag="button" v-bind:to="'/'">Home</router-link>
       <router-link class="button button-outlined "  tag="button" v-bind:to="'/login'">Login</router-link>
       <router-link class="button button-outlined " tag="button" v-bind:to="'/admin'"> Profile</router-link>
-      <router-link class="button button-transparent text-big" v-if="isLoggedIn" tag="button" v-bind:to="'/admin/new'">  ✏  </router-link>
+
 
     </div>
-
+<div class="container">
 
    <router-view></router-view>
+ </div>
   </div>
 </template>
 

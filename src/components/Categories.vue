@@ -3,20 +3,20 @@
     <router-link to="/admin">Back </router-link>
 
     <form class="edit" @submit.prevent="postCategory(category)">
+
       <label class="label" for="name">Name</label>
       <div class="input">
         <input class="input" required v-model="category.name" type="text" placeholder="Category name">
       </div>
-      <div class="row">
-        <div class="col-xs-12 col-md-6">
+
+
           <label class="label" for="message">Description</label>
 
 
-
-          <textarea class="textarea" required v-model="category.description" type="text" placeholder="Category description"> </textarea>
-
+        <div class="textarea">
+        <textarea  required v-model="category.description" type="text" placeholder="Category description"> </textarea>
         </div>
-      </div>
+
       <button type="submit">Submit</button>
     </form>
 
@@ -24,12 +24,12 @@
     <hr>
 
 
-      <transition-group name="list" tag="p">
+      <transition-group name="list" tag="div" class="row">
 
-        <div v-for="(category, index) in categories" :key="category.id" class="list-item col-l-6" >
+        <div v-for="(category, index) in categories" :key="category.id" class="list-item col-md-3" >
 
-              <h3>{{ category.name }} </h3>
-              <p v-html="category.description"></p>
+              <h4>{{ category.name }} </h4>
+              <p class="text-x-small" v-html="category.description"></p>
 
             <EditCategory :data="categories, category"  v-bind:index="index" v-on:deleted="deleteCategory(index)"></EditCategory>
         </div>
@@ -135,7 +135,7 @@ export default {
 <style >
 .list-item {
   display: inline-block;
-  margin-right: 10px;
+
 }
 .list-enter-active, .list-leave-active {
   transition: all 0.2s;

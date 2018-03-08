@@ -1,24 +1,29 @@
 <template>
-  <div id="main">
+  <div class="row ">
 
 
-    <main>
 
-      <div> Sign in or <router-link to="/register" tag="button">Register</router-link>
-        <hr>
-         <form class="login" @submit.prevent="login">
+        <div class="col-md-offset-4 col-md-4">
+            Sign in or <router-link to="/register" tag="button">Register</router-link>
+          </div>
 
-           <label>Email</label>
-           <input required v-model="email" type="text" placeholder="Snoopy"/>
-           <label>Password</label>
-           <input required v-model="password" type="password" placeholder="Password"/>
+         <form class="login input-group col-md-offset-4 col-md-4" @submit.prevent="login">
 
+           <div class="input input-with-icon full-width ">
+
+           <input   class="input" required v-model="email" type="text" placeholder="email" />
+          <i class="input-icon fa fa-user"></i> </div>
+
+          <div class="input input-with-icon full-width ">
+           <input class="input " required v-model="password" type="password" placeholder="Password"/>
+           <i class="input-icon fa fa-key"></i>
+         </div>
            <button type="submit">Login</button>
          </form>
 
-       </div>
 
-    </main>
+
+
   </div>
 </template>
 
@@ -45,7 +50,7 @@ export default {
 login(){
 
 
-      axios.post('http://peaceful-dusk-59248.herokuapp.com/api/login',
+      axios.post('https://peaceful-dusk-59248.herokuapp.com/api/login',
         {email: this.email,
          password: this.password})
 

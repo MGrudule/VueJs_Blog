@@ -1,6 +1,8 @@
 <template>
   <div>
-      <Slideout side="right" menu="#search"  panel="#main" :toggleSelectors="['.toggle-button-search','.toggle-button-close']"  >
+
+
+      <Slideout side="right" menu="#search"  panel="main" :toggleSelectors="['.toggle-button-search','.toggle-button-close']"  >
           <nav id="search" >
                 <div>
 
@@ -34,22 +36,15 @@
 
               </div>
           </nav>
-
     </Slideout>
-  <div id="main">
-    <header>
+<div class="align-button">
+<button class="toggle-button-search ">🔍</button> </div>
 
+    <main>
 
+      <transition name="slide-fade">  <router-view ></router-view> </transition>
+    </main>
 
-
-
-
-    <button class="toggle-button-search">🔍</button>  </header>
-
-<main>
-  <transition name="slide-fade">  <router-view ></router-view> </transition>
-</main>
-  </div>
 </div>
 </template>
 

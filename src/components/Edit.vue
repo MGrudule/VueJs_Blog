@@ -1,18 +1,17 @@
 <template>
   <div class="admin-edit">
-    
+
 
     <div>
       <form class="edit" @submit.prevent="updateArticle(article)">
 
-        <p>
-          <input type="text" v-model="article.title">
 
-        </p>
-        <p>
+          <input class="input" type="text" v-model="article.title">
+
+      <div class="textarea">
           <textarea id="articleContent" type="text" v-model="article.content" rows="20"> </textarea>
 
-        </p>
+        </div>
 
         <button type="submit">Update</button>
       </form>

@@ -3,20 +3,19 @@
   <router-link tag="button" to="/admin">Back to Articles</router-link>
  <form class="edit" @submit.prevent="postArticle(article)">
 
-   <p>
-     <input required v-model="article.title" type="text" placeholder="Article title">
 
-   </p>
-   <p>
-     <textarea required v-model="article.content" type="text" placeholder="Article content"> </textarea>
-     <div class="row">
+     <input class="input" required v-model="article.title" type="text" placeholder="Article title">
+
+<div class="textarea">
+     <textarea class="" required v-model="article.content" type="text" placeholder="Article content"> </textarea>
+   </div> <div class="row">
      <div v-for="(category, index) in categories" :key="category.id" class="checkbox col-md-2 ">
      <input type="checkbox" v-bind:id="category.id" v-bind:value="category.id" v-model="checkedNames" >
       <label v-bind:for="category.id"> {{category.name}} </label>
     </div>
-<span>Checked names: {{ checkedNames }}</span>
+
   </div>
-   </p>
+
 
    <button type="submit">Submit</button>
  </form>
