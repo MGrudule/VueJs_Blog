@@ -22,15 +22,7 @@
 
 
                 <div class="text-justify" v-html="article.content"></div>
-                <div class="row ">
-                  <ul class="tags col-xs-3">
-                    <li class="tag" v-for="category in article.articles_category" v-if="category.category !== null">
 
-                      <span class="tag"> {{category.category.name}} </span>
-
-                    </li>
-                  </ul>
-                </div>
 
                 <div class="button-group">
                     <button  class="" v-on:click="deleteArticle(article.id, index)"> Delete Article</button>
@@ -41,7 +33,7 @@
           </div>
 
          </transition-group>
-    
+
 
   </div>
 </template>
@@ -75,7 +67,7 @@ export default {
     deleteArticle: function (value, index) {
 
       this.loading = true;
-      axios.delete("http://peaceful-dusk-59248.herokuapp.com/api/auth/articles/" + value,
+      axios.delete("https://peaceful-dusk-59248.herokuapp.com/api/auth/articles/" + value,
     {
     headers: { Authorization: "Bearer " + localStorage.getItem('api_token') }
     })

@@ -9,7 +9,7 @@
 <div class="textarea">
      <textarea class="" required v-model="article.content" type="text" placeholder="Article content"> </textarea>
    </div> <div class="row">
-     <div v-for="(category, index) in categories" :key="category.id" class="checkbox col-md-2 ">
+     <div v-for="(category, index) in categories" :key="category.id" class="checkbox col-sm-3 col-xs-4 ">
      <input type="checkbox" v-bind:id="category.id" v-bind:value="category.id" v-model="checkedNames" >
       <label v-bind:for="category.id"> {{category.name}} </label>
     </div>

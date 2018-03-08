@@ -110,7 +110,7 @@ export default {
           var category = this.categories[index];
 
           this.loading = true;
-          axios.delete("http://peaceful-dusk-59248.herokuapp.com/api/categories/" + category.id,
+          axios.delete("https://peaceful-dusk-59248.herokuapp.com/api/categories/" + category.id,
           {
             headers: { Authorization: "Bearer " + localStorage.getItem('api_token') }
           })
@@ -133,15 +133,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style >
-.list-item {
-  display: inline-block;
 
-}
-.list-enter-active, .list-leave-active {
-  transition: all 0.2s;
-}
-.list-enter, .list-leave-to /* .list-leave-active below version 2.1.8 */ {
-  opacity: 0;
-  transform: translateY(30px);
-}
 </style>

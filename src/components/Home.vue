@@ -2,7 +2,7 @@
   <div>
 
 
-      <Slideout side="right" menu="#search"  panel="main" :toggleSelectors="['.toggle-button-search','.toggle-button-close']"  >
+      <Slideout class="sidebar" side="right" menu="#search"  panel="main" :toggleSelectors="['.toggle-button-search','.toggle-button-close']"  >
           <nav id="search" >
                 <div>
 
@@ -24,11 +24,13 @@
 
                       <ais-results >
                            <template slot-scope="{ result }">
-                             <span>
-
+                             <router-link  v-bind:to="'/articles/'+ result.id">
                                <ais-highlight :result="result" attribute-name="title"></ais-highlight>
-                             </span>
-                             <hr>
+                             </router-link>
+
+                              <hr>
+
+
                            </template>
                       </ais-results>
                       <ais-powered-by></ais-powered-by>

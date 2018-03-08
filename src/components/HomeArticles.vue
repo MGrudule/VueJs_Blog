@@ -15,23 +15,32 @@
 
 
   <transition-group name="list" tag="div" class="row">
-        <div class="col-md-4 list-item" v-for="article in articles" :key="article.id">
+        <div class="col-md-4 list-item " v-for="article in articles" :key="article.id">
 
-          <h3><router-link v-bind:to="'/articles/'+ article.id">{{ article.title }} id {{article.id}}</router-link></h3>
-          <span>{{ article.created_at | moment("dddd, MMMM Do YYYY") }}</span> by {{article.user.name}} <hr>
+          <h3><router-link v-bind:to="'/articles/'+ article.id">{{ article.title }} </router-link></h3>
+            <div class="box-header">
+              <span>{{ article.created_at | moment("dddd, MMMM Do YYYY") }}</span>
+              by {{article.user.name}}
+            </div>
 
-          <div>{{ article.content | readMore(150, '...') }} <router-link v-bind:to="'/articles/'+ article.id"> read more</router-link></div>
-          <hr>
+            <div class="article">{{ article.content | readMore(170, '...') }}
+              <router-link v-bind:to="'/articles/'+ article.id"> read more</router-link>
+            </div>
+
+
 
         <div class="row ">
-          Comments:  {{article.posted_comments_count}}
-          <ul class="tags col-xs-3">
-            <li class="tag" v-for="category in article.articles_category" v-if="category.category !== null">
 
-              <span class="tag"> {{category.category.name}} </span>
+          <ul class="tags  col-md-12">
+              <div class="row">
+                <div class="col-xs-3 "> <span class="speech-bubble">{{article.posted_comments_count}} </span></div>
+                <li class="tags col-xs-3" v-for="category in article.articles_category" v-if="category.category !== null">
 
-            </li>
+                  <span class="tag"> {{category.category.name}} </span>
 
+                </li>
+
+            </div>
           </ul>
         </div>
 

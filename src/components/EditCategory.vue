@@ -48,7 +48,7 @@ export default {
      params.append('description', category.description);
 
        this.loading = true;
-       axios.put("http://peaceful-dusk-59248.herokuapp.com/api/categories/" + category.id,
+       axios.put("https://peaceful-dusk-59248.herokuapp.com/api/categories/" + category.id,
              params,
          {
          headers: { Authorization: "Bearer " + localStorage.getItem('api_token') }

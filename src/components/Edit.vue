@@ -51,7 +51,7 @@ export default {
     params.append('content', article.content);
 
       this.loading = true;
-      axios.put("http://peaceful-dusk-59248.herokuapp.com/api/auth/articles/" + this.$route.params.id,
+      axios.put("https://peaceful-dusk-59248.herokuapp.com/api/auth/articles/" + this.$route.params.id,
             params,
         {
         headers: { Authorization: "Bearer " + localStorage.getItem('api_token') }

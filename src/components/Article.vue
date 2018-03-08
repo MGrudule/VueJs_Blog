@@ -30,31 +30,30 @@
 
 
               </li>
-            </ul>
+              </ul>
               </div>
-              <hr>
-              <h5> Comments </h5>
-              <div class="row" v-for="posted_comment in article.posted_comments" >
 
-                <div  class="col-md-6 ">
+              <transition-group name="list" tag="div" class="row">
+                    <div class="col-md-offset-2 col-md-8 comment list-item" v-for="posted_comment in article.posted_comments" :key="posted_comment.id" >
 
+                      <div class="header" >
+                        <strong>  {{posted_comment.user.name}} </strong>
+                        {{ posted_comment.created_at | moment("from", "now") }}
 
-                  <div>
-                    <span>{{ posted_comment.created_at | moment("from", "now") }}</span>
-                <strong>  {{posted_comment.user.name}} </strong>  <div v-html="posted_comment.content"></div>
+                      </div>
 
+                       <div v-html="posted_comment.content"></div>
 
-                  </div>
-                  <hr>
-                </div>
-            </div>
+                     </div>
+             </transition-group>
+             <br>
             <div class="row">
-              <form class="edit" @submit.prevent="postComment(comment)">
+              <form class="edit col-md-offset-2 col-md-8" @submit.prevent="postComment(comment)">
+                <div class="textarea">
 
+                  <textarea class="" required v-model="comment.content" type="text" placeholder="Post a Comment"> </textarea>
 
-                  <textarea required v-model="comment.content" type="text" placeholder="Post a Comment"> </textarea>
-
-                </p>
+                </div>
 
                 <button type="submit">Submit</button>
               </form>
@@ -134,7 +133,7 @@ this.article.posted_comments.push(response.data),
 
 
       this.loading = true;
-      axios.delete("http://peaceful-dusk-59248.herokuapp.com/api/auth/articles/" + value,
+      axios.delete("https://peaceful-dusk-59248.herokuapp.com/api/auth/articles/" + value,
     {
     headers: { Authorization: "Bearer " + localStorage.getItem('api_token') }
     })

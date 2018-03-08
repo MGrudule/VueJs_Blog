@@ -1,19 +1,24 @@
 <template>
   <div class="admin-profile">
 
-<h1> Welcome! {{ user_name}} </h1>
+<h1> Welcome {{ user.name}} ! </h1>
     <div>
-      <form class="edit" @submit.prevent="updateUser(user)">
 
+      <form class="edit input-group col-md-4" @submit.prevent="updateUser(user)">
 
-          <input type="text" v-model="user.name">
-
-
-          <input type="email" v-model="user.email">
-
-        <input type="text" v-model="user.theme">
-
-        <button type="submit">Update</button>
+                <div class="input input-with-icon full-width ">
+                    <input class="input" type="text" v-model="user.name">
+                    <i class="input-icon fa fa-user"></i>
+                </div>
+                <div class="input input-with-icon full-width ">
+                      <input type="email" v-model="user.email">
+                      <i class="input-icon fa fa-envelope"></i>
+                 </div>
+                 <div class="input input-with-icon full-width ">
+                      <input type="text" v-model="user.theme">
+                      <i class="input-icon fa fa-paint-brush"></i>
+                 </div>
+                      <button type="submit">Update</button>
       </form>
 
     </div>
@@ -35,18 +40,18 @@ export default {
   mounted(){
 
    axios.get("https://peaceful-dusk-59248.herokuapp.com/api/profile",
-{
-headers: { Authorization: "Bearer " + localStorage.getItem('api_token') }
-})
+    {
+    headers: { Authorization: "Bearer " + localStorage.getItem('api_token') }
+    })
 
-   .then((response)  =>  {
+       .then((response)  =>  {
 
-     this.user = response.data;
+         this.user = response.data;
 
-   }, (error)  =>  {
-     this.loading = false;
-   })
- },
+       }, (error)  =>  {
+         this.loading = false;
+       })
+     },
 
   methods: {
     updateUser: function (user) {
@@ -67,7 +72,7 @@ headers: { Authorization: "Bearer " + localStorage.getItem('api_token') }
        localStorage.setItem('user_id',response.data.id);
        localStorage.setItem('user_name',response.data.name);
        localStorage.setItem('user_theme',response.data.theme);
-    this.$emit("change")
+       this.$emit("change")
 
        //this.$router.push(this.$route.query.redirect || '/admin');
 
