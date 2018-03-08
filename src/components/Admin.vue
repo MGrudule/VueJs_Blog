@@ -2,7 +2,7 @@
 
   <div >
 
-    <Slideout menu="#navigation" panel="#main" :toggleSelectors="['.toggle-button-nav', '.toggle-button-close-nav']" >
+    <Slideout v-if="$mq === 'mobile'" menu="#navigation" panel="#main" :toggleSelectors="['.toggle-button-nav', '.toggle-button-close-nav']" >
             <nav id="navigation">
               <div>
 <button class="toggle-button-close-nav">X</button>
@@ -19,13 +19,26 @@
             </nav>
 
     </Slideout>
+    <nav v-if="$mq === 'md'" id="navigation">
 
+
+    <router-link tag="button" to="/admin/profile">Profile</router-link>
+
+        <router-link tag="button" to="/admin">Manage Articles</router-link>
+
+    <router-link tag="button" to="/admin/new">New Article</router-link>
+
+    <router-link tag="button" to="/admin/categories">Categories</router-link>
+
+
+    </nav>
 
   <div id="main">
 
 
       <header>
-          <button class="toggle-button-nav">☰</button>
+          <button v-if="$mq === 'mobile'" class="toggle-button-nav">☰</button>
+
           <span> Hello {{ user_name}} </span>
 
 

@@ -50,10 +50,10 @@ login(){
          password: this.password})
 
       .then(response => {
-
-        localStorage.setItem('api_token',response.data.user.api_token);
-        localStorage.setItem('user_id',response.data.user.id);
-        localStorage.setItem('user_name',response.use.user.name);
+console.log(response)
+        localStorage.setItem('api_token',response.data.data.api_token);
+        localStorage.setItem('user_id',response.data.data.id);
+        localStorage.setItem('user_name',response.data.data.name);
         localStorage.setItem('user_theme',response.data.data.theme);
 
 
@@ -62,7 +62,7 @@ login(){
       })
       .catch(error => {
 
-        localStorage.removeItem('api_token')
+
 
       });
     }

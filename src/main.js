@@ -15,7 +15,14 @@ import Articles from './components/Articles'
 import Article from './components/Article'
 import Profile from './components/Profile'
 import HomeArticles from './components/HomeArticles'
-import InstantSearch from 'vue-instantsearch';
+import InstantSearch from 'vue-instantsearch'
+import VueMq from 'vue-mq'
+Vue.use(VueMq, {
+  breakpoints: {
+    mobile: 630,
+    md: Infinity,
+  }
+});
 Vue.use(require('vue-moment'));
 Vue.use(InstantSearch);
 //tell vue to use the router

@@ -88,7 +88,7 @@ export default {
 
 
     postCategory: function (category) {
-this.loading = true;
+      this.loading = true;
         axios.post("https://peaceful-dusk-59248.herokuapp.com/api/categories",
             { name: category.name,
               description: category.description},
