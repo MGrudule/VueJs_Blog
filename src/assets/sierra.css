@@ -164,7 +164,21 @@ pre {
   transition: all 2s ease;
 }
 
-/* line 54, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 53, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+.list-item .header {
+  position: relative;
+  min-height: 3em;
+  margin-top: 1em;
+}
+
+/* line 57, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+.list-item .header h3 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* line 63, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item .article {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
@@ -172,7 +186,7 @@ pre {
   text-align: justify;
 }
 
-/* line 61, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 70, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item .box-header {
   background: #279e9a;
   color: #f1f1f1;
@@ -181,65 +195,65 @@ pre {
   font-style: italic;
 }
 
-/* line 71, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 80, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item:hover {
   transition: all .2s ease;
 }
 
-/* line 73, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 82, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item:hover .speech-bubble {
   transition: all .2s ease;
   background-color: #2ecc71;
 }
 
-/* line 76, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 85, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item:hover .speech-bubble:after {
   border-left-color: #2ecc71;
   transition: all .2s ease;
 }
 
-/* line 82, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
-.list-item:hover h3 + .box-header {
+/* line 91, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+.list-item:hover .header + .box-header {
   transition: all .2s ease;
   background: #2ecc71;
 }
 
-/* line 87, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 96, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item:hover .article {
   transition: all .2s ease;
   border-color: #2ecc71;
 }
 
-/* line 94, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 103, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item:hover h3 a {
   transition: all .2s ease;
   color: #2ecc71;
 }
 
-/* line 103, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 112, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item {
   display: inline-block;
 }
 
-/* line 106, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 115, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item.comment {
   background-color: rgba(255, 255, 255, 0.3);
   padding: 1em;
   border: 1px solid rgba(39, 158, 154, 0.3);
 }
 
-/* line 111, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 120, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item.comment .header {
   font-size: 0.9em;
   font-style: italic;
 }
 
-/* line 118, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 127, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-enter-active, .list-leave-active {
   transition: all 0.2s;
 }
 
-/* line 121, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 130, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-enter, .list-leave-to {
   opacity: 0;
   transform: translateY(30px);
@@ -2978,7 +2992,7 @@ input[type=radio]:checked + label:before {
   border-radius: 3px 0 0 3px;
   color: #f1f1f1;
   display: inline-block;
-  float: right;
+  float: left;
   line-height: 34px;
   padding: 0 5px;
   position: relative;
@@ -3075,7 +3089,7 @@ img {
 
 /* line 23, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_typography.scss */
 p {
-  line-height: 1.5em;
+  line-height: 1.2em;
   margin-bottom: 1.5em;
 }
 

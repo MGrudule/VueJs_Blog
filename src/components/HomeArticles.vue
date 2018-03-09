@@ -14,10 +14,10 @@
 
 
 
-  <transition-group name="list" tag="div" class="row">
+  <transition-group name="list" tag="div" class="row around-md">
         <div class="col-md-4 list-item " v-for="article in articles" :key="article.id">
-
-          <h3><router-link v-bind:to="'/articles/'+ article.id">{{ article.title }} </router-link></h3>
+          <div class="header">
+          <h3><router-link v-bind:to="'/articles/'+ article.id">{{ article.title }} </router-link></h3> </div>
             <div class="box-header">
               <span>{{ article.created_at | moment("dddd, MMMM Do YYYY") }}</span>
               by {{article.user.name}}
