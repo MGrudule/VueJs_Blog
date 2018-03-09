@@ -1,15 +1,19 @@
 <template>
-  <div class="admin-new wrapper">
+  <div class="admin-new section">
+
   <router-link tag="button" to="/admin">Back to Articles</router-link>
- <form class="edit" @submit.prevent="postArticle(article)">
+  <div class="row">
+ <form class="edit col-md-8" @submit.prevent="postArticle(article)">
 
 
      <input class="input" required v-model="article.title" type="text" placeholder="Article title">
 
 <div class="textarea">
      <textarea class="" required v-model="article.content" type="text" placeholder="Article content"> </textarea>
-   </div> <div class="row">
-     <div v-for="(category, index) in categories" :key="category.id" class="checkbox col-sm-3 col-xs-4 ">
+   </div>
+
+   <div class="row">
+     <div v-for="(category, index) in categories" :key="category.id" class="checkbox col-xs-offset-1 col-sm-2 col-xs-4 ">
      <input type="checkbox" v-bind:id="category.id" v-bind:value="category.id" v-model="checkedNames" >
       <label v-bind:for="category.id"> {{category.name}} </label>
     </div>
@@ -19,7 +23,7 @@
 
    <button type="submit">Submit</button>
  </form>
-
+</div>
   </div>
 
 </template>

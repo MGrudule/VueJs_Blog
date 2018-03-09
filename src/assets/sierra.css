@@ -115,44 +115,56 @@ body {
   position: relative;
 }
 
-/* line 22, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 21, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+::selection {
+  background: #2ecc71;
+  /* WebKit/Blink Browsers */
+}
+
+/* line 24, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+::-moz-selection {
+  background: #2ecc71;
+  /* Gecko Browsers */
+}
+
+/* line 28, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 p {
   font-weight: normal;
 }
 
-/* line 26, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 32, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 img {
   max-width: 100%;
 }
 
-/* line 30, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 36, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 strong {
   font-weight: 600;
 }
 
-/* line 34, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 40, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 ul {
   margin-bottom: 1em;
 }
 
-/* line 38, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 44, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 li {
   list-style: none;
   margin-bottom: .5em;
 }
 
-/* line 43, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 49, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 pre {
   margin-bottom: 2em !important;
 }
 
-/* line 46, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 52, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item {
   margin-top: 0.5em;
   transition: all 2s ease;
 }
 
-/* line 48, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 54, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item .article {
   background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
@@ -160,7 +172,7 @@ pre {
   text-align: justify;
 }
 
-/* line 55, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 61, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item .box-header {
   background: #279e9a;
   color: #f1f1f1;
@@ -169,75 +181,68 @@ pre {
   font-style: italic;
 }
 
-/* line 65, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 71, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item:hover {
   transition: all .2s ease;
 }
 
-/* line 67, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 73, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item:hover .speech-bubble {
   transition: all .2s ease;
   background-color: #2ecc71;
 }
 
-/* line 70, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 76, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item:hover .speech-bubble:after {
   border-left-color: #2ecc71;
   transition: all .2s ease;
 }
 
-/* line 76, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 82, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item:hover h3 + .box-header {
   transition: all .2s ease;
   background: #2ecc71;
 }
 
-/* line 81, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 87, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item:hover .article {
   transition: all .2s ease;
   border-color: #2ecc71;
 }
 
-/* line 88, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 94, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item:hover h3 a {
   transition: all .2s ease;
   color: #2ecc71;
 }
 
-/* line 97, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 103, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item {
   display: inline-block;
 }
 
-/* line 100, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 106, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item.comment {
   background-color: rgba(255, 255, 255, 0.3);
   padding: 1em;
   border: 1px solid rgba(39, 158, 154, 0.3);
 }
 
-/* line 105, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 111, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-item.comment .header {
   font-size: 0.9em;
   font-style: italic;
 }
 
-/* line 112, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 118, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-enter-active, .list-leave-active {
   transition: all 0.2s;
 }
 
-/* line 115, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
+/* line 121, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
 .list-enter, .list-leave-to {
   opacity: 0;
   transform: translateY(30px);
-}
-
-/* line 119, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_main.scss */
-.slideout-menu {
-  background-color: #279e9a;
-  color: #ffffff;
-  padding: 1em;
 }
 
 /**
@@ -1327,6 +1332,39 @@ input[type=radio]:checked + label:before {
 /* line 577, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
 .form-collapse .item:not(:last-child) {
   border-right: 0;
+}
+
+/* line 582, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+.slider {
+  -webkit-appearance: none;
+  margin-left: 2em;
+  height: 12px;
+  border-radius: 5px;
+  border: 1px solid #279e9a;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+/* line 597, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #279e9a;
+  cursor: pointer;
+}
+
+/* line 607, /home/codegorilla/blog/node_modules/sierra-library/src/scss/_forms.scss */
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #279e9a;
+  cursor: pointer;
 }
 
 /**

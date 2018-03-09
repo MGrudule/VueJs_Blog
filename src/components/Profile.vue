@@ -1,6 +1,6 @@
 <template>
-  <div class="admin-profile">
-
+  <div class="admin-profile section">
+<router-link tag="button" to="/admin">Back to Articles</router-link>
 <h1> Welcome {{ user.name}} ! </h1>
     <div>
 

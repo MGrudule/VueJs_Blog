@@ -1,21 +1,21 @@
 <template>
-  <div class="">
+  <div class="section">
 
     <div v-if="loading">
 
       Loading.....
     </div>
 
-  <div class="wrapper">
+  <div class="">
       <router-link tag="button" to="/">Back to Articles</router-link>
       <div class="row">
 
-            <div class="col-m-8 cards">
+            <div class="col-md-8 ">
 
               <div>
                 <h1>{{ article.title }}</h1>
                 <span>{{ article.created_at | moment("dddd, MMMM Do YYYY") }}</span>
-                <div v-html="article.content"></div>
+                <div class="text-justify" v-html="article.content"></div>
 
 
 
@@ -34,7 +34,7 @@
               </div>
 
               <transition-group name="list" tag="div" class="row">
-                    <div class="col-md-offset-2 col-md-8 comment list-item" v-for="posted_comment in article.posted_comments" :key="posted_comment.id" >
+                    <div class="col-md-offset-2 col-xs-8 comment list-item" v-for="posted_comment in article.posted_comments" :key="posted_comment.id" >
 
                       <div class="header" >
                         <strong>  {{posted_comment.user.name}} </strong>

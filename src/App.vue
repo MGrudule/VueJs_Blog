@@ -5,16 +5,12 @@
   <router-link class="button button-outlined "  tag="button" v-bind:to="'/'">Home</router-link>
       <router-link class="button button-outlined "  tag="button" v-bind:to="'/login'">Login</router-link>
       <router-link class="button button-outlined " tag="button" v-bind:to="'/admin'"> Admin</router-link>
-
-
+<div>
+-A  <input class="slider" type="range" min="8" max="24" step="3" v-model="fontSize"> +A  </div>
     </div>
 <div class="container">
-  <button v-on:click="fontSize++">
-    Increase font size
-  </button>
-  <button v-on:click="fontSize--">
-    Decrease font size
-  </button>
+
+
    <router-view v-bind:style="{ fontSize: fontSize + 'px' }"></router-view>
  </div>
   </div>
@@ -29,7 +25,7 @@ mixins:[isLoggedMixin],
 
 data () {
   return {
-    fontSize: 10,
+    fontSize: 15,
     isLoggedIn: false,
 
     user_name: localStorage.getItem('user_name'),

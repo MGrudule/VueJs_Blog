@@ -1,7 +1,7 @@
 <template>
-  <div class="admin-categories">
-    <router-link to="/admin">Back </router-link>
+  <div class="admin-categories section">
 
+<router-link tag="button" to="/admin">Back to Articles</router-link>
     <form class="edit" @submit.prevent="postCategory(category)">
 
       <label class="label" for="name">Name</label>
