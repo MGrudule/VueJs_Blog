@@ -1,8 +1,7 @@
 # Blog made with Vue.js 
 
 This is responsive blog that uses Vue.js and API back-end made in Laravel .
-The scrum board can be found on  [ Trello](https://trello.com/b/PNoFE0Nk/week-7-8-api-vuejs) 
-![Screenshot](https://github.com/MGrudule/VueJs_Blog/blob/master/Documentation/articles.gif)
+
 
 ## Functions
 
